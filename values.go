@@ -12,6 +12,6 @@ func values() {
 	fmt.Println(7.0 / 3.0)
 }
 
-func main() {
-	values()
-}
+// func main() {
+// 	values()
+// }
