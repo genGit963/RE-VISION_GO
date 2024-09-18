@@ -28,6 +28,6 @@ func if_else_study() {
 
 }
 
-func main() {
-	if_else_study()
-}
+// func main() {
+// 	if_else_study()
+// }
