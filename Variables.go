@@ -20,6 +20,6 @@ func variableStudy() {
 	fmt.Println("strange nature of f declaration: ", f)
 }
 
-func main() {
-	variableStudy()
-}
+// func main() {
+// 	variableStudy()
+// }
