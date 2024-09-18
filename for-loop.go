@@ -32,11 +32,11 @@ func forLoopStudy() {
 		if n%2 == 0 {
 			continue
 		}
-		fmt.Println(n)
+		fmt.Println("odd:", n)
 	}
 
 }
 
-func main() {
-	forLoopStudy()
-}
+// func main() {
+// 	forLoopStudy()
+// }
