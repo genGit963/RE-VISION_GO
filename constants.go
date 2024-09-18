@@ -21,6 +21,6 @@ func learnAboutConstant() {
 	fmt.Println("sin(n): ", math.Sin(n))
 }
 
-func main() {
-	learnAboutConstant()
-}
+// func main() {
+// 	learnAboutConstant()
+// }
