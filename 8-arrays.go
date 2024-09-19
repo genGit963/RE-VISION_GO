@@ -45,6 +45,6 @@ func learnArray() {
 
 }
 
-func main() {
-	learnArray()
-}
+// func main() {
+// 	learnArray()
+// }
