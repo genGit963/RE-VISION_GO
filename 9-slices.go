@@ -62,6 +62,6 @@ func study_slices() {
 
 }
 
-func main() {
-	study_slices()
-}
+// func main() {
+// 	study_slices()
+// }
