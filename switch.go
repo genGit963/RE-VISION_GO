@@ -53,6 +53,6 @@ func switchStudy() {
 
 }
 
-func main() {
-	switchStudy()
-}
+// func main() {
+// 	switchStudy()
+// }
