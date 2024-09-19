@@ -9,10 +9,13 @@ func learnArray() {
 	var a [5]int
 	fmt.Println("study array a: ", a)
 
-	a[4] = 10
-	fmt.Println("assign a[4]: ", 10, "Access a[4]: ", a[4])
+	a[2] = 10
+	fmt.Println("assign a[2]: ", 10, "now see a: ", a)
 
 	fmt.Println("len of a: ", len(a))
+
+	var c = [5]int{2, 3, 4, 5, 6} // declare and initialize the array
+	fmt.Println("checkout array c: ", c)
 
 	b := [5]int{2, 3, 4, 5, 6} // declare and initialize the array
 	fmt.Println("checkout array b: ", b)
