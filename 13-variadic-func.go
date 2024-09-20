@@ -17,7 +17,7 @@ func learnVariadicFunc() int {
 	return sum(1, 2, 4, 5)
 }
 
-func main() {
-	res := learnVariadicFunc()
-	fmt.Println("Finally, ", res)
-}
+// func main() {
+// 	res := learnVariadicFunc()
+// 	fmt.Println("Finally, ", res)
+// }
