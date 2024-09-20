@@ -17,7 +17,7 @@ func learnMultipleReturnValues() int {
 	return a + b
 }
 
-func main() {
-	res := learnMultipleReturnValues()
-	fmt.Println("Result: ", res)
-}
+// func main() {
+// 	res := learnMultipleReturnValues()
+// 	fmt.Println("Result: ", res)
+// }
