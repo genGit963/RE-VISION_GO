@@ -32,15 +32,21 @@ func examineRune(r rune) {
 func learn_StringAndRunes() {
 	fmt.Println("\n--------- strings and runes -------")
 
+	/*
+		s is a string assigned a literal value representing the word
+		“hello” in the Thai language.
+		Go string literals are UTF-8 encoded text.
+	*/
 	var s = "สวัสดี"
+
 	/*
 		Since strings are equivalent to []byte,
 		this will produce the length of the raw bytes stored within
 	*/
 
-	fmt.Println("Len:", len(s))
-
+	fmt.Println("Len:", len(s), s)
 	s += "😜"
+	fmt.Println("Len:", len(s), s)
 
 	for i := 0; i < len(s); i++ {
 		fmt.Printf("%x ", s[i])
