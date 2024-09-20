@@ -19,6 +19,8 @@ In Go, the concept of a character is called a rune
 */
 func learn_StringAndRunes() {
 
+	fmt.Println("\n--------- strings and runes -------\n")
+
 	const s = "สวัสดี"
 	/*
 		Since strings are equivalent to []byte,
