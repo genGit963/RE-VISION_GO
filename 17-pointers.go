@@ -26,9 +26,9 @@ func learn_Pointers() {
 	fmt.Println("\nAfter passing: ", &num, "then value of num: ", num) // Output: After: 0
 }
 
-func main() {
+// func main() {
 
-	learn_Pointers()
+// 	learn_Pointers()
 
-	fmt.Println("\nSummary \n Referencing (&): Gets the address of a variable (e.g., &num). \nDereferencing (*): Accesses or modifies the value at that address (e.g., *iptr).")
-}
+// 	fmt.Println("\nSummary \n Referencing (&): Gets the address of a variable (e.g., &num). \nDereferencing (*): Accesses or modifies the value at that address (e.g., *iptr).")
+// }
