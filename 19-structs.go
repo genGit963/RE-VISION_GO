@@ -48,4 +48,5 @@ func learn_structs() {
 
 func main() {
 	learn_structs()
+	println()
 }
