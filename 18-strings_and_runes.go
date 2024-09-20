@@ -30,7 +30,6 @@ func examineRune(r rune) {
 }
 
 func learn_StringAndRunes() {
-
 	fmt.Println("\n--------- strings and runes -------")
 
 	const s = "สวัสดี"
