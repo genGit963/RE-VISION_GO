@@ -14,6 +14,12 @@ type person struct {
 }
 
 func newPerson(name string) *person {
+	/*
+		Go is a garbage collected language;
+		you can safely return a pointer to a local variable -
+		 	it will only be cleaned up by the garbage collector
+			when there are no active references to it.
+	*/
 	p := person{name: name}
 	p.age = 42
 	return &p
