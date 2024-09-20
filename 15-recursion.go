@@ -11,9 +11,9 @@ func factorial(n int) int {
 	}
 }
 
-func main() {
+// func main() {
 
-	factValue := factorial(10)
+// 	factValue := factorial(10)
 
-	fmt.Println("Factorial result: ", factValue)
-}
+// 	fmt.Println("Factorial result: ", factValue)
+// }
