@@ -14,7 +14,7 @@ func zeroval(ival int) {
 
 func zeroptr(iptr *int) {
 	fmt.Println("\nsee iptr parameter \n value: ", iptr, "\n self adrs:", &iptr)
-	*iptr = 0
+	*iptr = *iptr + 10 // modify iptr
 }
 
 func learn_Pointers() {
