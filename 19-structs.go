@@ -38,14 +38,14 @@ func learn_structs() {
 	fmt.Println(person{name: "Fred"})
 
 	// An & prefix yields a pointer to the struct.
-	fmt.Println(&person{name: "Ann", age: 40})
+	fmt.Println(&person{name: "Ann", age: 40}, (&person{name: "Ann"}).name)
 
 	// It’s idiomatic to encapsulate new struct creation in constructor functions
 	fmt.Println(newPerson("Jon"))
+	fmt.Println("newPerson name: ", newPerson("Jon").name)
+	fmt.Println("newPerson name: ", newPerson("Jon").name)
 }
 
 func main() {
-
 	learn_structs()
-
 }
