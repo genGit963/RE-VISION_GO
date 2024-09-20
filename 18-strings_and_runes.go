@@ -37,7 +37,8 @@ func learn_StringAndRunes() {
 		“hello” in the Thai language.
 		Go string literals are UTF-8 encoded text.
 	*/
-	var s = "สวัสดี"
+	// var s = "สวัสดี" // Thai
+	var s = "नमस्कार" // nepali
 
 	/*
 		Since strings are equivalent to []byte,
