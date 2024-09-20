@@ -70,6 +70,6 @@ func learn_StringAndRunes() {
 	}
 }
 
-func main() {
-	learn_StringAndRunes()
-}
+// func main() {
+// 	learn_StringAndRunes()
+// }
