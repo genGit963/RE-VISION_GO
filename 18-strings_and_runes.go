@@ -32,13 +32,15 @@ func examineRune(r rune) {
 func learn_StringAndRunes() {
 	fmt.Println("\n--------- strings and runes -------")
 
-	const s = "สวัสดี 😜"
+	var s = "สวัสดี"
 	/*
 		Since strings are equivalent to []byte,
 		this will produce the length of the raw bytes stored within
 	*/
 
 	fmt.Println("Len:", len(s))
+
+	s += "😜"
 
 	for i := 0; i < len(s); i++ {
 		fmt.Printf("%x ", s[i])
