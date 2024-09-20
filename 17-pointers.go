@@ -13,6 +13,7 @@ func zeroval(ival int) {
 }
 
 func zeroptr(iptr *int) {
+	fmt.Println("see iptr parameter adrs: ", &iptr)
 	*iptr = 0
 }
 
