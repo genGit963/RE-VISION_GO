@@ -7,6 +7,7 @@ func intSeq() func() int {
 
 	return func() int {
 		i++
+		fmt.Println(i)
 		return i
 	}
 }
