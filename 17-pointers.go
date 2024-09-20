@@ -29,4 +29,6 @@ func learn_Pointers() {
 func main() {
 
 	learn_Pointers()
+
+	fmt.Println("Summary \n Referencing (&): Gets the address of a variable (e.g., &num). \nDereferencing (*): Accesses or modifies the value at that address (e.g., *iptr).")
 }
