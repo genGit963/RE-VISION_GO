@@ -58,7 +58,7 @@ func learn_StringAndRunes() {
 	for idx, runeValue := range s {
 		fmt.Printf("%#U starts at %d\n", runeValue, idx)
 	}
-	fmt.Println("\n Using DecodeRuneInString")
+	fmt.Println("\nUsing DecodeRuneInString")
 
 	for i, w := 0, 0; i < len(s); i += w {
 		runeValue, width := utf8.DecodeRuneInString(s[i:])
