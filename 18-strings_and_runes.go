@@ -19,7 +19,7 @@ In Go, the concept of a character is called a rune
 */
 func learn_StringAndRunes() {
 
-	fmt.Println("\n--------- strings and runes -------\n")
+	fmt.Println("\n--------- strings and runes -------")
 
 	const s = "สวัสดี"
 	/*
