@@ -18,7 +18,7 @@ func zeroptr(iptr *int) {
 }
 
 func learn_Pointers() {
-	fmt.Println("---------- Learning about pointers ----------")
+	fmt.Println("\n---------- Learning about pointers ----------")
 
 	var num int = 42                                                 // A normal integer variable
 	fmt.Println("Before:", num)                                      // Output: Before: 42
