@@ -43,7 +43,7 @@ func learn_structs() {
 	// It’s idiomatic to encapsulate new struct creation in constructor functions
 	fmt.Println(newPerson("Jon"))
 	fmt.Println("newPerson name: ", newPerson("Jon").name)
-	fmt.Println("newPerson name: ", newPerson("Jon").name)
+	fmt.Println("newPerson age: ", newPerson("Jon").age)
 }
 
 func main() {
