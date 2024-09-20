@@ -17,6 +17,18 @@ In Go, the concept of a character is called a rune
 		rune - it’s an integer that represents a Unicode code point.
 	 This Go blog post is a good introduction to the topic.
 */
+func examineRune(r rune) {
+	/*
+		Values enclosed in single quotes are rune literals.
+		We can compare a rune value to a rune literal directly.
+	*/
+	if r == 't' {
+		fmt.Println("found tee")
+	} else if r == 'ส' {
+		fmt.Println("found so sua")
+	}
+}
+
 func learn_StringAndRunes() {
 
 	fmt.Println("\n--------- strings and runes -------")
@@ -47,18 +59,6 @@ func learn_StringAndRunes() {
 		// This demonstrates passing a rune value to a function.
 
 		examineRune(runeValue)
-	}
-}
-
-func examineRune(r rune) {
-	/*
-		Values enclosed in single quotes are rune literals.
-		We can compare a rune value to a rune literal directly.
-	*/
-	if r == 't' {
-		fmt.Println("found tee")
-	} else if r == 'ส' {
-		fmt.Println("found so sua")
 	}
 }
 
