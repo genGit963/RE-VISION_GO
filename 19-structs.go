@@ -26,7 +26,7 @@ func newPerson(name string) *person {
 }
 
 func learn_structs() {
-	fmt.Println("\n --------- learn Structs ---------")
+	fmt.Println("\n--------- learn Structs ---------")
 
 	// This syntax creates a new struct.
 	fmt.Println(person{"Bob", 20})
