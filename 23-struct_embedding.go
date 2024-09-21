@@ -40,4 +40,5 @@ func learn_Struct_Embedding() {
 
 func main() {
 	learn_Struct_Embedding()
+	println()
 }
