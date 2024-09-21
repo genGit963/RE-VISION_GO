@@ -77,7 +77,7 @@ func learn_interfaces() {
 
 }
 
-func main() {
-	learn_interfaces()
-	println()
-}
+// func main() {
+// 	learn_interfaces()
+// 	println()
+// }
