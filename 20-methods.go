@@ -21,7 +21,7 @@ func (r rect) perimeter() int {
 }
 
 func studyMethods() {
-	fmt.Println("---------- Learn about methods ---------")
+	fmt.Println("\n---------- Learn about methods ---------")
 
 	r := rect{width: 10, height: 5}
 	fmt.Println("area: ", r.area())
@@ -34,4 +34,5 @@ func studyMethods() {
 
 func main() {
 	studyMethods()
+	fmt.Println()
 }
