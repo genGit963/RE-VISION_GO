@@ -67,6 +67,13 @@ func learn_interfaces() {
 	fmt.Println("circle geometry area: ", gmtryCircle.area())
 	fmt.Println("circle geometry perimeter: ", gmtryCircle.perimeter())
 
+	// conclusion
+	fmt.Println("Key Takeaways:\n" +
+		"• Structs are used to store concrete data with predefined fields.\n" +
+		"• Interfaces define abstract behaviors that types can implement, enabling polymorphism.\n" +
+		"• Structs and interfaces can work together, where a struct can implement one or more interfaces by defining the required methods.\n" +
+		"• A key feature of interfaces is that they allow different types (like Dog, Car, or Person) to implement the same behavior and be used interchangeably as the same interface type.")
+
 }
 
 func main() {
