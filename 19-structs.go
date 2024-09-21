@@ -46,7 +46,7 @@ func learn_structs() {
 	fmt.Println("newPerson age: ", newPerson("Jon").age)
 }
 
-func main() {
-	learn_structs()
-	println()
-}
+// func main() {
+// 	learn_structs()
+// 	println()
+// }
