@@ -14,7 +14,7 @@ func (r *rect) area() int {
 
 /*
 Methods can be defined for either pointer or value receiver types.
-Here’s an example of a value receiver.
+Here's an example of a value receiver.
 */
 func (r rect) perimeter() int {
 	return 2*r.width + 2*r.height
@@ -30,6 +30,9 @@ func studyMethods() {
 	rp := &r
 	fmt.Println("by ptr, area: ", rp.area())
 	fmt.Println("by pty, perimeter: ", rp.perimeter())
+
+	// conclusion
+	fmt.Println("\nConclusion\n  Use pointer receivers (*Type) when you: \n\tNeed to modify the struct. \n\tWant to avoid copying large structs for performance reasons.\nUse value receivers (Type) when:\n\tYou don't need to modify the struct.\n\tThe struct is small, and copying it doesn't impact performance.")
 }
 
 func main() {
