@@ -35,7 +35,7 @@ func studyMethods() {
 	fmt.Println("\nConclusion\n\nUse pointer receivers (*Type) when you: \n\tNeed to modify the struct. \n\tWant to avoid copying large structs for performance reasons.\nUse value receivers (Type) when:\n\tYou don't need to modify the struct.\n\tThe struct is small, and copying it doesn't impact performance.")
 }
 
-func main() {
-	studyMethods()
-	fmt.Println()
-}
+// func main() {
+// 	studyMethods()
+// 	fmt.Println()
+// }
