@@ -72,7 +72,8 @@ func learn_interfaces() {
 		"• Structs are used to store concrete data with predefined fields.\n" +
 		"• Interfaces define abstract behaviors that types can implement, enabling polymorphism.\n" +
 		"• Structs and interfaces can work together, where a struct can implement one or more interfaces by defining the required methods.\n" +
-		"• A key feature of interfaces is that they allow different types (like Dog, Car, or Person) to implement the same behavior and be used interchangeably as the same interface type.")
+		"• A key feature of interfaces is that they allow different types (like Dog, Car, or Person) to implement the same behavior and be used interchangeably as the same interface type." +
+		"• To learn more about interface: https://jordanorelli.tumblr.com/post/32665860244/how-to-use-interfaces-in-go ")
 
 }
 
