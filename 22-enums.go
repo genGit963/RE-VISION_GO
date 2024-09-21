@@ -19,7 +19,7 @@ var stateName = map[ServerState]string{
 }
 
 func transition(s ServerState) ServerState {
-	fmt.Println("s: ", s, stateName)
+	fmt.Println("s: ", s, stateName[s])
 	switch s {
 	case StateIdle:
 		return StateConnected
