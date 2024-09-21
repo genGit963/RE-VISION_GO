@@ -32,7 +32,7 @@ func studyMethods() {
 	fmt.Println("by pty, perimeter: ", rp.perimeter())
 
 	// conclusion
-	fmt.Println("\nConclusion\n  Use pointer receivers (*Type) when you: \n\tNeed to modify the struct. \n\tWant to avoid copying large structs for performance reasons.\n\tUse value receivers (Type) when:\n\tYou don't need to modify the struct.\n\tThe struct is small, and copying it doesn't impact performance.")
+	fmt.Println("\nConclusion\n  Use pointer receivers (*Type) when you: \n\tNeed to modify the struct. \n\tWant to avoid copying large structs for performance reasons.\nUse value receivers (Type) when:\n\tYou don't need to modify the struct.\n\tThe struct is small, and copying it doesn't impact performance.")
 }
 
 func main() {
