@@ -42,7 +42,7 @@ func learn_Enums() {
 
 }
 
-func main() {
-	learn_Enums()
-	println()
-}
+// func main() {
+// 	learn_Enums()
+// 	println()
+// }
