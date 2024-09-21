@@ -56,6 +56,17 @@ func learn_interfaces() {
 	fmt.Println("reactange: ", rt)
 	fmt.Println("circle: ", cle)
 
+	// try directly the interface
+	// var gmtryRect geometry = rt
+	var gmtryRect geometry = rectangle{width: 40, height: 20}
+	fmt.Println("reactange geometry area: ", gmtryRect.area())
+	fmt.Println("reactange geometry perimeter: ", gmtryRect.perimeter())
+
+	// var gmtryCircle geometry = cle
+	var gmtryCircle geometry = circle{radius: 40}
+	fmt.Println("circle geometry area: ", gmtryCircle.area())
+	fmt.Println("circle geometry perimeter: ", gmtryCircle.perimeter())
+
 }
 
 func main() {
