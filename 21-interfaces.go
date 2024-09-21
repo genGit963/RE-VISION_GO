@@ -53,6 +53,8 @@ func learn_interfaces() {
 
 	measure(rt)
 	measure(cle)
+	fmt.Println("reactange: ", rt)
+	fmt.Println("circle: ", cle)
 
 }
 
