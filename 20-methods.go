@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Go supports methods defined on struct types.
 type rect struct {
 	width, height int
 }
@@ -18,8 +19,17 @@ Here’s an example of a value receiver.
 func (r rect) perimeter() int {
 	return 2*r.width + 2*r.height
 }
+
 func studyMethods() {
 	fmt.Println("---------- Learn about methods ---------")
+
+	r := rect{width: 10, height: 5}
+	fmt.Println("area: ", r.area())
+	fmt.Println("perimeter: ", r.perimeter())
+
+	rp := &r
+	fmt.Println("by ptr, area: ", rp.area())
+	fmt.Println("by pty, perimeter: ", rp.perimeter())
 }
 
 func main() {
