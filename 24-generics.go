@@ -37,13 +37,9 @@ func (lst *List[T]) Push(v T) {
 
 // pop
 func (lst *List[T]) Pop() {
-	if lst.tail == nil {
-		lst.head = nil
-		lst.tail = lst.head
-	} else {
-		lst.tail.next = nil
-		lst.tail = lst.tail.next
-	}
+
+	lst.head = nil
+	lst.tail = lst.head
 
 }
 
