@@ -5,6 +5,8 @@ import (
 	"time"
 )
 
+// A goroutine is a lightweight thread of execution.
+
 func oneFunction(from string) {
 	for i := 0; i < 3; i++ {
 		fmt.Println(from, ": ", i)
