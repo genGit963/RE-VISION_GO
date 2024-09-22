@@ -9,7 +9,7 @@ func learn_Channel_buffering() {
 	messages <- "channel"
 
 	fmt.Println(<-messages)
-	fmt.Println(<-messages)
+	// fmt.Println(<-messages)
 
 }
 
