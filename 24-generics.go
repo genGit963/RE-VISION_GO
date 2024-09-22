@@ -70,7 +70,7 @@ func learn_Generics() {
 	fmt.Println("pop list:", lst.AllElements())
 }
 
-func main() {
-	learn_Generics()
-	println()
-}
+// func main() {
+// 	learn_Generics()
+// 	println()
+// }
