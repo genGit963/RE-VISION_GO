@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func SliceIndex[S ~[]E, E comparable](s S, v E) int {
+func SliceIndex[Slice ~[]Element, Element comparable](s Slice, v Element) int {
 	for i := range s {
 		if v == s[i] {
 			return i
