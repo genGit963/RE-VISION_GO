@@ -7,7 +7,6 @@ func learn_Channel_buffering() {
 
 	messages <- "buffered"
 	messages <- "channel"
-	messages <- "channel msg 2"
 
 	fmt.Println(<-messages)
 	fmt.Println(<-messages)
@@ -15,6 +14,6 @@ func learn_Channel_buffering() {
 }
 
 func main() {
-	go learn_Channel_buffering()
+	learn_Channel_buffering()
 	println()
 }
