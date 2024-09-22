@@ -13,7 +13,7 @@ func learn_Channel_buffering() {
 
 }
 
-func main() {
-	learn_Channel_buffering()
-	println()
-}
+// func main() {
+// 	learn_Channel_buffering()
+// 	println()
+// }
