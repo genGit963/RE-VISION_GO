@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func SliceIndex[Slice ~[]Element, Element comparable](s Slice, v Element) int {
+func SliceIndex[Slice ~[]Element, Element comparable](s Slice, e Element) int {
 	for i := range s {
-		if v == s[i] {
+		if e == s[i] {
 			return i
 		}
 	}
@@ -35,6 +35,18 @@ func (lst *List[T]) Push(v T) {
 	}
 }
 
+// pop
+func (lst *List[T]) Pop() {
+	if lst.tail == nil {
+		lst.head = nil
+		lst.tail = lst.head
+	} else {
+		lst.tail.next = nil
+		lst.tail = lst.tail.next
+	}
+
+}
+
 /*
 AllElements returns all the List elements as a slice.
 */
@@ -59,6 +71,8 @@ func learn_Generics() {
 	lst.Push(13)
 	lst.Push(23)
 	fmt.Println("list:", lst.AllElements())
+	lst.Pop()
+	fmt.Println("pop list:", lst.AllElements())
 }
 
 func main() {
