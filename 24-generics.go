@@ -37,8 +37,6 @@ func (lst *List[T]) Push(v T) {
 
 /*
 AllElements returns all the List elements as a slice.
-In the next example we’ll see a more idiomatic way of iterating
-over all elements of custom types.
 */
 func (lst *List[T]) AllElements() []T {
 	var elems []T
@@ -52,9 +50,10 @@ func learn_Generics() {
 	fmt.Println("\n-------- Learn Generics ----------")
 	var s = []string{"foo", "bar", "zoo"}
 
-	fmt.Println("index of zoo:", SliceIndex(s, "foo"))
+	// Corrected call to SliceIndex
+	fmt.Println("index of foo:", SliceIndex(s, "foo"))
+	fmt.Println("index of zoo:", SliceIndex(s, "zoo"))
 
-	_ = SliceIndex[[]string, string](s, "zoo")
 	lst := List[int]{}
 	lst.Push(10)
 	lst.Push(13)
