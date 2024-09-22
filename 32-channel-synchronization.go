@@ -8,9 +8,10 @@ import (
 func worker(done chan bool) {
 	fmt.Println("Working......")
 	time.Sleep(time.Second)
-	fmt.Println("done")
+	fmt.Println("done", done)
 
 	done <- true
+	fmt.Println("end", done)
 }
 
 func learn_Channel_Synchronization() {
