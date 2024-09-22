@@ -34,7 +34,7 @@ func learn_Custom_error() {
 	}
 }
 
-func main() {
-	learn_Custom_error()
-	println()
-}
+// func main() {
+// 	learn_Custom_error()
+// 	println()
+// }
