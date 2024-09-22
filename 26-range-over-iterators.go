@@ -56,7 +56,7 @@ func learn_range_Over_Iterator() {
 
 	// Since List.All returns an iterator, we can use it in a regular range loop.
 	for e := range list.All() {
-		fmt.Println(e)
+		fmt.Print(e)
 	}
 
 	// Packages like slices have a number of useful functions to work with iterators. For example, Collect takes any iterator and collects all its values into a slice.
