@@ -39,7 +39,6 @@ func (lst *List[T]) Push(v T) {
 func (lst *List[T]) Pop() {
 
 	lst.head = nil
-	lst.tail = lst.head
 
 }
 
