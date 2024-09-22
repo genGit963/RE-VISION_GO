@@ -56,6 +56,6 @@ func Learn_Errors() {
 
 }
 
-func main() {
-	Learn_Errors()
-}
+// func main() {
+// 	Learn_Errors()
+// }
