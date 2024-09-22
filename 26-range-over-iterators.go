@@ -56,16 +56,16 @@ func learn_range_Over_Iterator() {
 
 	// Since List.All returns an iterator, we can use it in a regular range loop.
 	for e := range list.All() {
-		fmt.Print(e)
+		fmt.Print(e, " ")
+		fmt.Print(e*2, " ")
 	}
 
 	// Packages like slices have a number of useful functions to work with iterators. For example, Collect takes any iterator and collects all its values into a slice.
 	all := slices.Collect(list.All())
-	fmt.Println("all:", all)
+	fmt.Println("\nall:", all)
 
 	for n := range genFib() {
 		// Once the loop hits break or an early return, the yield function passed to the iterator will return false.
-
 		if n >= 10 {
 			break
 		}
