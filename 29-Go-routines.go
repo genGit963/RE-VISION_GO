@@ -30,7 +30,7 @@ func learn_GoRoutine() {
 	fmt.Println("done")
 }
 
-func main() {
-	learn_GoRoutine()
-	println()
-}
+// func main() {
+// 	learn_GoRoutine()
+// 	println()
+// }
