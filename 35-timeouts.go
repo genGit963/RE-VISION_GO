@@ -45,5 +45,5 @@ func learn_Timeouts() {
 
 func main() {
 	learn_Timeouts()
-	println()
+	println("-------------------------------")
 }
