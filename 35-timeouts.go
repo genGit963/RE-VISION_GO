@@ -26,7 +26,7 @@ func learn_Timeouts() {
 	case res := <-c1:
 		fmt.Println(res)
 	case <-time.After(1 * time.Second):
-		fmt.Println("time out 1")
+		fmt.Println("time out 1, failed to get 'res' ")
 	}
 
 	c2 := make(chan string, 1)
@@ -38,7 +38,7 @@ func learn_Timeouts() {
 	case res := <-c2:
 		fmt.Println(res)
 	case <-time.After(3 * time.Second):
-		fmt.Println("time out 2")
+		fmt.Println("time out 2, failed to get 'res' ")
 	}
 
 }
