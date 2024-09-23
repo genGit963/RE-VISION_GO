@@ -16,7 +16,7 @@ This ping function only accepts a channel for sending
 	values. It would be a compile-time error to try
 	to receive on this channel.
 */
-// sender
+// send
 func ping(pings chan<- string, msg string) {
 	pings <- msg
 }
@@ -25,6 +25,8 @@ func ping(pings chan<- string, msg string) {
 The pong function accepts one channel for
 receives (pings) and a second for sends (pongs).
 */
+
+// receive
 func pong(pings <-chan string, pongs chan<- string) {
 	msg := <-pings
 	pongs <- msg
