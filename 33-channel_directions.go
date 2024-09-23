@@ -42,7 +42,7 @@ func learn_Channel_Directions() {
 	fmt.Println("Final message: ", <-pongs)
 }
 
-func main() {
-	learn_Channel_Directions()
-	println()
-}
+// func main() {
+// 	learn_Channel_Directions()
+// 	println()
+// }
