@@ -17,7 +17,7 @@ func learn_Range_Over_Channels() {
 	 above, the iteration terminates after receiving
 	  the 2 elements.
 	*/
-	fmt.Println("range over channesls")
+	fmt.Println("range over channesls: ")
 	for elem := range queue {
 		fmt.Println(elem)
 	}
