@@ -38,7 +38,7 @@ func learn_Timeouts() {
 	case res := <-c2:
 		fmt.Println(res)
 	case <-time.After(3 * time.Second):
-		fmt.Println("time out 2, failed to get 'res' ")
+		fmt.Println("time out 3, failed to get 'res' ")
 	}
 
 }
