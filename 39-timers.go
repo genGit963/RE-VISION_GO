@@ -35,7 +35,7 @@ func learn_Timers() {
 		Give the timer2 enough time to fire,
 		if it ever was going to, to show it is in fact stopped.
 	*/
-	time.Sleep(3 * time.Second)
+	time.Sleep(2 * time.Second)
 }
 
 func main() {
