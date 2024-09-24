@@ -20,7 +20,7 @@ func learn_Closing_Channels() {
 	}()
 
 	// send 3 jobs
-	for j := 1; j <= 6; j++ {
+	for j := 1; j <= 60; j++ {
 		jobs <- j
 		fmt.Println("sent job : ", j)
 	}
