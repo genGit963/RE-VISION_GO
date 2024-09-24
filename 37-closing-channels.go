@@ -35,6 +35,7 @@ func learn_Closing_Channels() {
 }
 
 func main() {
+	println("\n-------------------------------")
 	learn_Closing_Channels()
-	println("-------------------------------")
+	println("\n-------------------------------")
 }
