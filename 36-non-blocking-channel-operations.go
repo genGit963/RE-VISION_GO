@@ -39,6 +39,16 @@ func learn_non_blocking_channel_operations() {
 	default:
 		fmt.Println("no activity")
 	}
+
+	working := true
+	select {
+	case msg := <-messages:
+		fmt.Println("received message: ", msg)
+	case signals <- working:
+		fmt.Println("no activity", signals)
+	default:
+		fmt.Println("no activity")
+	}
 }
 
 func main() {
