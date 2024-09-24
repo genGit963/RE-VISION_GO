@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func learn_Closing_Channels() {
 	jobs := make(chan int, 5)
@@ -20,9 +23,10 @@ func learn_Closing_Channels() {
 	}()
 
 	// send 3 jobs
-	for j := 1; j <= 60; j++ {
+	for j := 1; j <= 5; j++ {
 		jobs <- j
 		fmt.Println("sent job : ", j)
+		time.Sleep(time.Second)
 	}
 
 	close(jobs)
