@@ -39,7 +39,6 @@ func learn_Timers() {
 }
 
 func main() {
-	println("\n-------------------------------")
 	learn_Timers()
 	println("\n-------------------------------")
 }
