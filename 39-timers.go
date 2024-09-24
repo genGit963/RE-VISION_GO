@@ -38,7 +38,7 @@ func learn_Timers() {
 	time.Sleep(2 * time.Second)
 }
 
-func main() {
-	learn_Timers()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Timers()
+// 	println("\n-------------------------------")
+// }
