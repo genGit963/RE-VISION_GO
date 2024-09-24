@@ -38,8 +38,8 @@ func learn_Closing_Channels() {
 	fmt.Println("received more jobs: ", ok)
 }
 
-func main() {
-	println("\n-------------------------------")
-	learn_Closing_Channels()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	println("\n-------------------------------")
+// 	learn_Closing_Channels()
+// 	println("\n-------------------------------")
+// }
