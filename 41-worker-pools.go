@@ -12,7 +12,7 @@ instances. These workers will receive work on the jobs channel
  We’ll sleep a second per job to simulate an expensive task.
 */
 
-func worker(id int, jobs <-chan int, results chan<- int) {
+func workerf1(id int, jobs <-chan int, results chan<- int) {
 	smthCalculation := 0
 	for j := range jobs {
 		fmt.Println("worker ", id, "started job: ", j)
@@ -33,7 +33,7 @@ func learn_Worker_pools() {
 
 	// setting workers
 	for w := 1; w <= numWorkers; w++ {
-		go worker(w, jobs, results)
+		go workerf1(w, jobs, results)
 	}
 
 	// setting jobs
@@ -49,7 +49,7 @@ func learn_Worker_pools() {
 	}
 }
 
-func main() {
-	learn_Worker_pools()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Worker_pools()
+// 	println("\n-------------------------------")
+// }
