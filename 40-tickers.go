@@ -36,7 +36,7 @@ func learn_Tickers() {
 
 	time.Sleep(1600 * time.Millisecond)
 	ticker.Stop()
-	// done <- true
+	done <- true
 	fmt.Println("Ticker stopped")
 }
 
