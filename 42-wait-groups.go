@@ -52,7 +52,7 @@ func learn_Wait_Groups() {
 	wg.Wait()
 }
 
-func main() {
-	learn_Wait_Groups()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Wait_Groups()
+// 	println("\n-------------------------------")
+// }
