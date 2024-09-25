@@ -45,7 +45,7 @@ func learn_Worker_pools() {
 
 	// fetch the results of each worker's jobs
 	for a := 1; a <= numJobs; a++ {
-		<-results
+		fmt.Println("results: ", <-results)
 	}
 }
 
