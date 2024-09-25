@@ -40,7 +40,7 @@ func learn_Tickers() {
 	fmt.Println("Ticker stopped")
 }
 
-func main() {
-	learn_Tickers()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Tickers()
+// 	println("\n-------------------------------")
+// }
