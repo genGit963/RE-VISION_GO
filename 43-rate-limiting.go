@@ -35,7 +35,7 @@ func learn_Rate_Limiting() {
 		This limiter channel will receive a value every 200 milliseconds.
 		This is the regulator in our rate limiting scheme.
 	*/
-	// limiter := time.Tick(200 * time.Millisecond)
+	limiter := time.Tick(200 * time.Millisecond)
 
 	/*
 		By blocking on a receive from the limiter channel before
@@ -43,22 +43,23 @@ func learn_Rate_Limiting() {
 		200 milliseconds.
 	*/
 	for req := range requests {
-		// <-limiter
+		<-limiter //try it by cmt-ing
 		fmt.Println("request ", req, " : ", time.Now())
 	}
 
-	// /*
-	// 	We may want to allow short bursts of requests in our rate limiting
-	// 	scheme while preserving the overall rate limit.
-	// 	We can accomplish this by buffering our limiter channel.
-	// 	This burstyLimiter channel will allow bursts of up to 3 events.
-	// */
-	// burstyLimiter := make(chan time.Time, 3)
+	/*
+		We may want to allow short bursts of requests in our rate limiting
+		scheme while preserving the overall rate limit.
+		We can accomplish this by buffering our limiter channel.
+		This burstyLimiter channel will allow bursts of up to 3 events.
+	*/
+	burstyLimiter := make(chan time.Time, 3)
 
-	// // Fill up the channel to represent allowed bursting.
-	// for i := 0; i < 3; i++ {
-	// 	burstyLimiter <- time.Now()
-	// }
+	// Fill up the channel to represent allowed bursting.
+	for i := 0; i < 3; i++ {
+		burstyLimiter <- time.Now()
+		fmt.Println(<-burstyLimiter)
+	}
 
 	// /*
 	// 	Every 200 milliseconds we’ll try to add a new value to
