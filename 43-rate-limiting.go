@@ -61,20 +61,20 @@ func learn_Rate_Limiting() {
 		fmt.Println(<-burstyLimiter)
 	}
 
-	// /*
-	// 	Every 200 milliseconds we’ll try to add a new value to
-	// 	burstyLimiter, up to its limit of 3.
-	// */
-	// go func() {
-	// 	for t := range time.Tick(200 * time.Millisecond) {
-	// 		burstyLimiter <- t
-	// 	}
-	// }()
-	// /*
-	//    Now simulate 5 more incoming requests.
-	//    The first 3 of these will benefit from the burst
-	//    capability of burstyLimiter.
-	// */
+	/*
+		Every 200 milliseconds we’ll try to add a new value to
+		burstyLimiter, up to its limit of 3.
+	*/
+	go func() {
+		for t := range time.Tick(200 * time.Millisecond) {
+			burstyLimiter <- t
+		}
+	}()
+	/*
+	   Now simulate 5 more incoming requests.
+	   The first 3 of these will benefit from the burst
+	   capability of burstyLimiter.
+	*/
 	// burstyRequests := make(chan int, 5)
 	// for i := 1; i <= 5; i++ {
 	// 	burstyRequests <- i
