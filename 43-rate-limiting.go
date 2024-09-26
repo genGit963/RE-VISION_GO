@@ -26,8 +26,9 @@ func learn_Rate_Limiting() {
 	requests := make(chan int, 5)
 	for i := 1; i <= 5; i++ {
 		requests <- i
-		println(<-requests)
+
 	}
+	println(<-requests)
 	close(requests)
 
 	// /*
