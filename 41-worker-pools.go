@@ -26,7 +26,7 @@ func workerf1(id int, jobs <-chan int, results chan<- int) {
 func learn_Worker_pools() {
 	fmt.Println("\n----------- learn_Worker_pools -------------")
 
-	const numWorkers = 5
+	const numWorkers = 3
 	const numJobs = 5
 	jobs := make(chan int, numJobs)
 	results := make(chan int, numJobs)
