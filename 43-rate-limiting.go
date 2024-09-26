@@ -29,6 +29,7 @@ func learn_Rate_Limiting() {
 
 	}
 	println(<-requests)
+	println(<-requests)
 	close(requests)
 
 	// /*
