@@ -48,7 +48,7 @@ func learn_Atomic_counters() {
 
 }
 
-func main() {
-	learn_Atomic_counters()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Atomic_counters()
+// 	println("\n-------------------------------")
+// }
