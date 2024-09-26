@@ -43,7 +43,7 @@ func learn_Rate_Limiting() {
 	*/
 	for req := range requests {
 		<-limiter
-		fmt.Println("request : ", req, time.Now())
+		fmt.Println("request ", req, " : ", time.Now())
 	}
 
 	/*
@@ -80,7 +80,7 @@ func learn_Rate_Limiting() {
 	close(burstyRequests)
 	for req := range burstyRequests {
 		<-burstyLimiter
-		fmt.Println("request: ", req, time.Now())
+		fmt.Println("request ", req, " : ", time.Now())
 	}
 
 }
