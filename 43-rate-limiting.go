@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 /*
@@ -28,25 +29,23 @@ func learn_Rate_Limiting() {
 		requests <- i
 
 	}
-	println(<-requests)
-	println(<-requests)
 	close(requests)
 
-	// /*
-	// 	This limiter channel will receive a value every 200 milliseconds.
-	// 	This is the regulator in our rate limiting scheme.
-	// */
-	// limiter := time.Tick(200 * time.Millisecond)
+	/*
+		This limiter channel will receive a value every 200 milliseconds.
+		This is the regulator in our rate limiting scheme.
+	*/
+	limiter := time.Tick(200 * time.Millisecond)
 
-	// /*
-	// 	By blocking on a receive from the limiter channel before
-	// 	serving each request, we limit ourselves to 1 request every
-	// 	200 milliseconds.
-	// */
-	// for req := range requests {
-	// 	<-limiter
-	// 	fmt.Println("request ", req, " : ", time.Now())
-	// }
+	/*
+		By blocking on a receive from the limiter channel before
+		serving each request, we limit ourselves to 1 request every
+		200 milliseconds.
+	*/
+	for req := range requests {
+		<-limiter
+		fmt.Println("request ", req, " : ", time.Now())
+	}
 
 	// /*
 	// 	We may want to allow short bursts of requests in our rate limiting
