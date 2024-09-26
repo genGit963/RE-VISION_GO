@@ -35,7 +35,7 @@ func learn_Rate_Limiting() {
 		This limiter channel will receive a value every 200 milliseconds.
 		This is the regulator in our rate limiting scheme.
 	*/
-	limiter := time.Tick(200 * time.Millisecond)
+	// limiter := time.Tick(200 * time.Millisecond)
 
 	/*
 		By blocking on a receive from the limiter channel before
@@ -43,7 +43,7 @@ func learn_Rate_Limiting() {
 		200 milliseconds.
 	*/
 	for req := range requests {
-		<-limiter
+		// <-limiter
 		fmt.Println("request ", req, " : ", time.Now())
 	}
 
