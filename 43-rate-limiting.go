@@ -68,10 +68,19 @@ func learn_Rate_Limiting() {
 			burstyLimiter <- t
 		}
 	}()
-
+	/*
+	   Now simulate 5 more incoming requests.
+	   The first 3 of these will benefit from the burst
+	   capability of burstyLimiter.
+	*/
 	burstyRequests := make(chan int, 5)
 	for i := 1; i <= 5; i++ {
 		burstyRequests <- i
+	}
+	close(burstyRequests)
+	for req := range burstyRequests {
+		<-burstyLimiter
+		fmt.Println("request: ", req, time.Now())
 	}
 
 }
