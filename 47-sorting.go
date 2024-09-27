@@ -32,7 +32,7 @@ func learn_Sorting() {
 	fmt.Println("IsSorted: ", s, s1)
 }
 
-func main() {
-	learn_Sorting()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Sorting()
+// 	println("\n-------------------------------")
+// }
