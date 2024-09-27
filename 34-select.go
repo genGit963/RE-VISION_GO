@@ -41,7 +41,7 @@ func learn_select() {
 	}
 }
 
-// func main() {
-// 	learn_select()
-// 	println()
-// }
+func main() {
+	learn_select()
+	println()
+}

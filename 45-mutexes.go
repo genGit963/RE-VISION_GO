@@ -60,7 +60,7 @@ func learn_Mutexes() {
 
 }
 
-func main() {
-	learn_Mutexes()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Mutexes()
+// 	println("\n-------------------------------")
+// }
