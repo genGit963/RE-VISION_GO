@@ -32,6 +32,7 @@ func learn_select() {
 	}()
 
 	for i := 0; i < 2; i++ {
+		fmt.Println("iteration: ", i)
 		select {
 		case msg1 := <-c1:
 			fmt.Println("received : ", msg1)
