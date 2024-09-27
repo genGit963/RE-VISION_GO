@@ -65,7 +65,7 @@ func learn_sorting_by_functions() {
 
 }
 
-func main() {
-	learn_sorting_by_functions()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_sorting_by_functions()
+// 	println("\n-------------------------------")
+// }
