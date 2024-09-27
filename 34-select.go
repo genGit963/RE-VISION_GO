@@ -22,12 +22,12 @@ func learn_select() {
 
 	// go routines
 	go func() {
-		time.Sleep(1 * time.Second)
+		time.Sleep(2 * time.Second)
 		c1 <- "one"
 	}()
 
 	go func() {
-		time.Sleep(2 * time.Second)
+		time.Sleep(1 * time.Second)
 		c2 <- "two"
 	}()
 
