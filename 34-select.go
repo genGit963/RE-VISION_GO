@@ -2,17 +2,16 @@ package main
 
 import (
 	"fmt"
-	"time"
+	// "time"
 )
 
 /*
 Go’s select lets you wait on multiple channel operations.
 
 Combining goroutines and channels with select is
- a powerful feature of Go.
 
+	a powerful feature of Go.
 */
-
 func learn_select() {
 	fmt.Println("\n---------- Learn Select --------- ")
 
@@ -22,12 +21,12 @@ func learn_select() {
 
 	// go routines
 	go func() {
-		time.Sleep(1 * time.Second)
+		// time.Sleep(1 * time.Second)
 		c1 <- "one"
 	}()
 
 	go func() {
-		time.Sleep(2 * time.Second)
+		// time.Sleep(2 * time.Second)
 		c2 <- "two"
 	}()
 
