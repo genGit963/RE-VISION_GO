@@ -15,7 +15,7 @@ Mostly we use it to "fail fast" on errors
 func learn_Panic() {
 	fmt.Println("\n----------- learn_Panic -----------")
 
-	// panic("a problem")
+	// panic("a problem") // try uncommenting and commenting
 
 	/*
 		A common use of panic is to abort if a function
@@ -32,7 +32,15 @@ func learn_Panic() {
 
 }
 
-func main() {
-	learn_Panic()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Panic()
+// 	println("\n-------------------------------")
+// }
+
+/*
+Note--->
+ that unlike some languages which use exceptions
+ for handling of many errors,
+ in Go it is idiomatic to use error-indicating
+ return values wherever possible.
+*/
