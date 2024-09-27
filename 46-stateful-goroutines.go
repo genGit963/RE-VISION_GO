@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"sync/atomic"
+	"time"
+)
 
 /*
 In the previous example we used explicit locking with mutexes
@@ -45,8 +50,8 @@ func learn_Stateful_GoRoutine() {
 		The reads and writes channels will be used by other goroutines
 		to issue read and write requests, respectively.
 	*/
-	reads := make(chan readOp)
-	writes := make(chan writeOp)
+	reads_chan := make(chan readOp)
+	writes_chan := make(chan writeOp)
 
 	/*
 		Here is the goroutine that owns the state,
@@ -61,13 +66,14 @@ func learn_Stateful_GoRoutine() {
 		(and the desired value in the case of reads).
 	*/
 	go func() {
+		// state
 		var state = make(map[int]int)
 		for {
 			select {
-			case read := <-reads:
+			case read := <-reads_chan:
 				read.resp <- state[read.key]
 
-			case write := <-writes:
+			case write := <-writes_chan:
 				state[write.key] = write.val
 				write.resp <- true
 			}
@@ -75,23 +81,52 @@ func learn_Stateful_GoRoutine() {
 	}()
 
 	/*
-		This starts 100 goroutines to issue reads to the state-owning goroutine
-		via the reads channel.
-		Each read requires constructing a readOp, sending it over the reads channel,
-		and then receiving the result over the provided resp channel.
-	*/
+		This starts 100 goroutines to issue reads to the state-owning
+		goroutine via the reads channel.
 
-	for r:=0; r<100; r++{
-		go func(){
+		Each read requires
+		1. constructing a readOp,
+		2. sending it over the reads channel, and
+		3. then receiving the result over the provided resp channel.
+	*/
+	for r := 0; r < 100; r++ {
+		go func() {
 			for {
 				read := readOp{
-					key: rand.Intn(5),
+					key:  rand.Intn(5),
 					resp: make(chan int)}
-				reads <- read
-				}
-			}()
-		}
+				reads_chan <- read
+				<-read.resp
+				atomic.AddUint64(&readOps, 1)
+				time.Sleep(time.Millisecond)
+			}
+		}()
 	}
+
+	// We start 10 writes as well, using a similar approach.
+	for w := 0; w < 10; w++ {
+		go func() {
+			for {
+				write := writeOp{
+					key:  rand.Intn(5),
+					val:  rand.Intn(100),
+					resp: make(chan bool),
+				}
+				writes_chan <- write
+				<-writes_chan
+				atomic.AddUint64(&writeOps, 1)
+				time.Sleep(time.Millisecond)
+			}
+		}()
+
+	}
+	// Let the goroutines work for a second.
+	time.Sleep(time.Second)
+
+	readOpsFinal := atomic.LoadUint64(&readOps)
+	fmt.Println("readOps counts: ", readOpsFinal)
+	writeOpsFinal := atomic.LoadUint64(&writeOps)
+	fmt.Println("writeOps counts: ", writeOpsFinal)
 
 }
 

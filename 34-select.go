@@ -10,8 +10,7 @@ import (
 Go’s select lets you wait on multiple channel operations.
 
 Combining goroutines and channels with select is
-
-	a powerful feature of Go.
+a powerful feature of Go.
 */
 func learn_select() {
 	fmt.Println("\n---------- Learn Select --------- ")
@@ -42,7 +41,7 @@ func learn_select() {
 	}
 }
 
-func main() {
-	learn_select()
-	println()
-}
+// func main() {
+// 	learn_select()
+// 	println()
+// }
