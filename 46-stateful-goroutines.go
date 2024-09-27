@@ -123,6 +123,7 @@ func learn_Stateful_GoRoutine() {
 	// Let the goroutines work for a second.
 	time.Sleep(time.Second)
 
+	// Finally, capture and report the op counts.
 	readOpsFinal := atomic.LoadUint64(&readOps)
 	fmt.Println("readOps counts: ", readOpsFinal)
 	writeOpsFinal := atomic.LoadUint64(&writeOps)
@@ -130,7 +131,20 @@ func learn_Stateful_GoRoutine() {
 
 }
 
-func main() {
-	learn_Stateful_GoRoutine()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Stateful_GoRoutine()
+// 	println("\n-------------------------------")
+// }
+
+/*
+For this particular case
+the goroutine-based approach was a bit more involved than the
+mutex-based one.
+It might be useful in certain cases though, for example where you
+have other channels involved or when managing multiple such
+mutexes would be error-prone.
+
+You should use whichever approach feels most natural,
+especially with respect to understanding the correctness
+of your program.
+*/
