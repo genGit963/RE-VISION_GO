@@ -22,7 +22,7 @@ func learn_String_Formating() {
 
 	fmt.Printf("type: %T\n", p)
 
-	fmt.Printf("bool: %t\n", true)
+	fmt.Printf("bool: %t\n", false)
 
 	fmt.Printf("int: %d\n", 123)
 
