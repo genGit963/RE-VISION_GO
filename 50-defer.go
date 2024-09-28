@@ -64,7 +64,7 @@ func closeFile(f *os.File) {
 	}
 }
 
-func main() {
-	learn_defer()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_defer()
+// 	println("\n-------------------------------")
+// }
