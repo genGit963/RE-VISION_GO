@@ -30,7 +30,7 @@ func learn_String_Functions() {
 	p("ToUpper:   ", s.ToUpper("test"))
 }
 
-func main() {
-	learn_String_Functions()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_String_Functions()
+// 	println("\n-------------------------------")
+// }
