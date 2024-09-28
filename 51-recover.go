@@ -31,7 +31,8 @@ func learn_Recover() {
 	mayPanic()
 	fmt.Println("After mayPanic !")
 }
-func main() {
-	learn_Recover()
-	println("\n-------------------------------")
-}
+
+// func main() {
+// 	learn_Recover()
+// 	println("\n-------------------------------")
+// }

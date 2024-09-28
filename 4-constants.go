@@ -6,10 +6,10 @@ import (
 )
 
 // global contant
-const s string = "i am constant"
+const const_string string = "i am constant"
 
 func learnAboutConstant() {
-	fmt.Println("global constant s: ", s)
+	fmt.Println("global constant s: ", const_string)
 
 	const n = 500000000
 

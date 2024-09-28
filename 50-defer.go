@@ -40,9 +40,9 @@ func learn_defer() {
 
 }
 
-func createFile(s string) *os.File {
+func createFile(filepath string) *os.File {
 	fmt.Println("creating file")
-	f, err := os.Create(s)
+	f, err := os.Create(filepath)
 	if err != nil {
 		panic(err)
 	}
