@@ -28,7 +28,7 @@ func learn_String_Formating() {
 
 	fmt.Printf("bin: %b\n", 14)
 
-	fmt.Printf("char: %c\n", 33)
+	fmt.Printf("char: %c\n", 45)
 
 	fmt.Printf("hex: %x\n", 456)
 
