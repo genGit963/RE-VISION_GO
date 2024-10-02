@@ -60,7 +60,8 @@ func learn_String_Formating() {
 
 	fmt.Fprintf(os.Stderr, "io: an %s\n", "error")
 }
-func main() {
-	learn_String_Formating()
-	println("\n-------------------------------")
-}
+
+// func main() {
+// 	learn_String_Formating()
+// 	println("\n-------------------------------")
+// }
