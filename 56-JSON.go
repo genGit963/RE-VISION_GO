@@ -50,6 +50,20 @@ func learn_JSON() {
 	mapB, _ := json.Marshal(mapD)
 	fmt.Println(string(mapB))
 
+	/*
+		The JSON package can automatically
+		encode your custom data types.
+
+		It will only include exported fields
+		in the encoded output
+		and will by default use those names as the JSON keys.
+	*/
+	res1D := &response1{
+		Page:   1,
+		Fruits: []string{"apple", "peach", "pear"}}
+	res1B, _ := json.Marshal(res1D)
+	fmt.Println(string(res1B))
+
 }
 
 func main() {
