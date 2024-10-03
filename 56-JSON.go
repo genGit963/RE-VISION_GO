@@ -85,6 +85,18 @@ func learn_JSON() {
 	fmt.Println("Encode json: ", res2B)
 	fmt.Println("Decode json: ", string(res2B), "\n")
 
+	/*
+		Now let’s look at decoding JSON data
+		into Go values.
+	*/
+	byt := []byte(`{"num":6.13, "strs":["a","b"]}`)
+	var dat map[string]interface{}
+
+	if err := json.Unmarshal(byt, &dat); err != nil {
+		panic(err)
+	}
+	fmt.Println(dat)
+
 }
 
 func main() {
