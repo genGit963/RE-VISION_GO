@@ -16,7 +16,7 @@ Here are some examples of common regexp-related tasks in Go.
 func learn_regular_expression() {
 	fmt.Println("\n------------ learn_regular_expression --------------")
 
-	match, _ := regexp.MatchString("p([a-z]+)ch", "prekdjafjfajfad ach")
+	match, _ := regexp.MatchString("p([a-z]+)ch", "prekdjafjfajfadach")
 	fmt.Print(match)
 
 	// r, _ := regexp
