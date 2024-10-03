@@ -17,7 +17,7 @@ func learn_regular_expression() {
 	fmt.Println("\n------------ learn_regular_expression --------------")
 
 	match, _ := regexp.MatchString("p([a-z]+)ch", "prekdjafjfajfadach")
-	fmt.Print(match)
+	fmt.Println(match)
 
 	/*
 		Above we used a string pattern directly,
@@ -34,6 +34,11 @@ func learn_regular_expression() {
 	fmt.Println("idx: ", r.FindStringIndex("peach punch"))
 
 	fmt.Println(r.FindStringSubmatch("peach punch"))
+
+	fmt.Println(r.FindStringSubmatchIndex("peach punch"))
+
+	fmt.Println(r.FindAllString("peach punch pinch", -1))
+
 }
 
 func main() {
