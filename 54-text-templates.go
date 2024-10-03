@@ -33,6 +33,12 @@ func learn_text_Template() {
 	Create := func(name, t string) *template.Template {
 		return template.Must(template.New(name).Parse(t))
 	}
+	/*
+		If the data is a struct we can use the {{.FieldName}}
+		action to access its fields.
+		The fields should be exported to be
+		accessible when a template is executing.
+	*/
 
 	t2 := Create("t2", "Name: {{.Name}}\n")
 
@@ -44,10 +50,18 @@ func learn_text_Template() {
 		"Name": "Mickey Mouse",
 	})
 
-	// t3 := Create("t3",
-	// 	"{{if . -}} yes {{else -}} no {{end}}\n")
-	// t3.Execute(os.Stdout, "not empty")
-	// t3.Execute(os.Stdout, "")
+	/*
+		if/else provide conditional execution for templates.
+		A value is considered false if it’s the default value
+		of a type, such as 0, an empty string, nil pointer, etc.
+
+		This sample demonstrates another feature of templates:
+		using - in actions to trim whitespace.
+	*/
+	t3 := Create("t3",
+		"{{if . -}} yes {{else -}} no {{end}}\n")
+	t3.Execute(os.Stdout, "not empty")
+	t3.Execute(os.Stdout, "")
 
 	// t4 := Create("t4",
 	// 	"Range: {{range .}}{{.}} {{end}}\n")
