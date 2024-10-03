@@ -64,6 +64,19 @@ func learn_JSON() {
 	res1B, _ := json.Marshal(res1D)
 	fmt.Println(string(res1B))
 
+	/*
+		You can use tags on struct field declarations
+		to customize the encoded JSON key names.
+
+		Check the definition of response2
+		above to see an example of such tags.
+	*/
+	res2D := &response2{
+		Page:   1,
+		Fruits: []string{"apple", "peach", "pear"}}
+	res2B, _ := json.Marshal(res2D)
+	fmt.Println(string(res2B))
+
 }
 
 func main() {
