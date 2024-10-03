@@ -21,7 +21,7 @@ Only exported fields will be encoded/decoded in JSON.
 Fields must start with capital letters to be exported.
 */
 type response2 struct {
-	Page   int      `json:"page"`
+	Page   int      `json:"page_no"`
 	Fruits []string `json:"fruits"`
 }
 
