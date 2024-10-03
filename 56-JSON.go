@@ -30,31 +30,31 @@ func learn_JSON() {
 
 	//  encoding basic data types to JSON strings
 	bloB, _ := json.Marshal(true)
-	fmt.Println(bloB)
-	fmt.Println(string(bloB))
+	fmt.Println("Encode json: ", bloB)
+	fmt.Println("Decode json: ", string(bloB))
 
 	intB, _ := json.Marshal(1)
-	fmt.Println(intB)
-	fmt.Println(string(intB))
+	fmt.Println("Encode json: ", intB)
+	fmt.Println("Decode json: ", string(intB))
 
 	fltB, _ := json.Marshal(2.34)
-	fmt.Println(fltB)
-	fmt.Println(string(fltB))
+	fmt.Println("Encode json: ", fltB)
+	fmt.Println("Decode json: ", string(fltB))
 
 	strB, _ := json.Marshal("gopher")
-	fmt.Println(strB)
-	fmt.Println(string(strB))
+	fmt.Println("Encode json: ", strB)
+	fmt.Println("Decode json: ", string(strB))
 
 	// slices and maps, which encode to JSON arrays and objects as you’d expect.
 	slcD := []string{"apple", "peach", "pear"}
 	slcB, _ := json.Marshal(slcD)
-	fmt.Println(slcB)
-	fmt.Println(string(slcB))
+	fmt.Println("Encode json: ", slcB)
+	fmt.Println("Decode json: ", string(slcB))
 
 	mapD := map[string]string{"apple": "red", "orange": "organe", "banana": "yellow"}
 	mapB, _ := json.Marshal(mapD)
-	fmt.Println(mapB)
-	fmt.Println(string(mapB))
+	fmt.Println("Encode json: ", mapB)
+	fmt.Println("Decode json: ", string(mapB))
 
 	/*
 		The JSON package can automatically
@@ -68,8 +68,8 @@ func learn_JSON() {
 		Page:   1,
 		Fruits: []string{"apple", "peach", "pear"}}
 	res1B, _ := json.Marshal(res1D)
-	fmt.Println(res1B)
-	fmt.Println(string(res1B))
+	fmt.Println("Encode json: ", res1B)
+	fmt.Println("Decode json: ", string(res1B))
 
 	/*
 		You can use tags on struct field declarations
@@ -82,8 +82,8 @@ func learn_JSON() {
 		Page:   1,
 		Fruits: []string{"apple", "peach", "pear"}}
 	res2B, _ := json.Marshal(res2D)
-	fmt.Println(res2B)
-	fmt.Println(string(res2B))
+	fmt.Println("Encode json: ", res2B)
+	fmt.Println("Decode json: ", string(res2B))
 
 }
 
