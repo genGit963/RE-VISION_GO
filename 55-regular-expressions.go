@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"regexp"
 )
@@ -38,6 +39,17 @@ func learn_regular_expression() {
 	fmt.Println(r.FindStringSubmatchIndex("peach punch"))
 
 	fmt.Println(r.FindAllString("peach punch pinch", -1))
+
+	fmt.Println(r.Match([]byte("peach")))
+
+	r = regexp.MustCompile("p([a-z]+)ch")
+	fmt.Println("regexp:", r)
+
+	fmt.Println(r.ReplaceAllString("a peach", "<fruit>"))
+
+	in := []byte("a peach")
+	out := r.ReplaceAllFunc(in, bytes.ToUpper)
+	fmt.Println(string(out))
 
 }
 
