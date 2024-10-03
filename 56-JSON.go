@@ -46,6 +46,10 @@ func learn_JSON() {
 	slcB, _ := json.Marshal(slcD)
 	fmt.Println(slcB)
 
+	mapD := map[string]string{"apple": "red", "orange": "organe", "banana": "yellow"}
+	mapB, _ := json.Marshal(mapD)
+	fmt.Println(string(mapB))
+
 }
 
 func main() {
