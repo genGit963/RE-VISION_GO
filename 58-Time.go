@@ -49,7 +49,7 @@ func learn_Time() {
 	p(then.Add(-diff))
 }
 
-func main() {
-	learn_Time()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Time()
+// 	println("\n-------------------------------")
+// }
