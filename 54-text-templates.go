@@ -15,14 +15,20 @@ func learn_text_Template() {
 
 	t1 = template.Must(t1.Parse("Value: {{.}}\n"))
 
+	/*
+		By “executing” the template we generate its text with specific
+		values for its actions.
+		The {{.}} action is replaced by the value passed
+		as a parameter to Execute.
+	*/
 	t1.Execute(os.Stdout, "some text")
 	t1.Execute(os.Stdout, 5)
-	// t1.Execute(os.Stdout, []string{
-	// 	"Go",
-	// 	"Rust",
-	// 	"C++",
-	// 	"C#",
-	// })
+	t1.Execute(os.Stdout, []string{
+		"Go",
+		"Rust",
+		"C++",
+		"C#",
+	})
 
 	// Create := func(name, t string) *template.Template {
 	// 	return template.Must(template.New(name).Parse(t))
