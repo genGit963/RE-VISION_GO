@@ -25,7 +25,7 @@ an XML attribute rather than a nested element.
 */
 type Plant struct {
 	XMLName xml.Name `xml:"plant"`
-	Id      int      `xml:"id, attr"`
+	Id      int      `xml:"id"`
 	Name    string   `xml:"name"`
 	Origin  []string `xml:"origin"`
 }
@@ -73,7 +73,7 @@ func learn_XML() {
 	fmt.Println(string(out))
 }
 
-func main() {
-	learn_XML()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_XML()
+// 	println("\n-------------------------------")
+// }
