@@ -81,7 +81,7 @@ func learn_text_Template() {
 		})
 }
 
-func main() {
-	learn_text_Template()
-	println("\n--------------------")
-}
+// func main() {
+// 	learn_text_Template()
+// 	println("\n--------------------")
+// }
