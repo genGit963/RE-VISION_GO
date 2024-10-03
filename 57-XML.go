@@ -40,6 +40,7 @@ func learn_XML() {
 	coffee.Origin = []string{"Ethiopia", "Brazil"}
 
 	out, _ := xml.MarshalIndent(coffee, " ", " ")
+	fmt.Println(out)
 	fmt.Println(string(out))
 
 	fmt.Println(xml.Header, string(out))
