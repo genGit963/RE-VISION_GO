@@ -1,6 +1,7 @@
 package main
 
 import (
+	"os"
 	"text/template"
 )
 
@@ -12,10 +13,10 @@ func learn_text_Template() {
 		panic(err)
 	}
 
-	// t1 = template.Must(t1.Parse("Value: {{.}}\n"))
+	t1 = template.Must(t1.Parse("Value: {{.}}\n"))
 
-	// t1.Execute(os.Stdout, "some text")
-	// t1.Execute(os.Stdout, 5)
+	t1.Execute(os.Stdout, "some text")
+	t1.Execute(os.Stdout, 5)
 	// t1.Execute(os.Stdout, []string{
 	// 	"Go",
 	// 	"Rust",
