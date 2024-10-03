@@ -8,6 +8,8 @@ import (
 
 /*
 ---> JSON <---
+
+detail info: https://pkg.go.dev/encoding/json, https://go.dev/blog/json
 Go offers built-in support for JSON encoding and decoding,
 including to and from built-in and custom data types.
 */
@@ -123,7 +125,7 @@ func learn_JSON() {
 
 }
 
-func main() {
-	learn_JSON()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_JSON()
+// 	println("\n-------------------------------")
+// }
