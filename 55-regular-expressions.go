@@ -8,12 +8,10 @@ import (
 
 /*
 ---> Regular Expression <---
-
+For info: https://pkg.go.dev/regexp
 Go offers built-in support for regular expressions.
 Here are some examples of common regexp-related tasks in Go.
-
 */
-
 func learn_regular_expression() {
 	fmt.Println("\n------------ learn_regular_expression --------------")
 
