@@ -86,8 +86,7 @@ func learn_JSON() {
 	fmt.Println("Decode json: ", string(res2B), "\n")
 
 	/*
-		Now let’s look at decoding JSON data
-		into Go values.
+		decoding JSON data into Go values.
 	*/
 	byt := []byte(`{"num":6.13, "strs":["a","b"]}`)
 	var dat map[string]interface{}
@@ -96,6 +95,26 @@ func learn_JSON() {
 		panic(err)
 	}
 	fmt.Println(dat)
+
+	num := dat["num"].(float64)
+	fmt.Println(num)
+
+	// Accessing nested data requires a series of conversions.
+	strs := dat["strs"].([]interface{})
+	str1 := strs[0].(string)
+	fmt.Println(str1)
+
+	/*
+	   We can also decode JSON into custom data types.
+	   This has the advantages of adding additional type-safety
+	   to our programs and eliminating
+	   the need for type assertions when accessing the decoded data.
+	*/
+	str := `{"page": 1, "fruits": ["apple", "peach"]}`
+	res := response2{}
+	json.Unmarshal([]byte(str), &res)
+	fmt.Println(res)
+	fmt.Println(res.Fruits[0])
 
 }
 
