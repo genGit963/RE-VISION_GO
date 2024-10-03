@@ -30,19 +30,19 @@ func learn_text_Template() {
 		"C#",
 	})
 
-	// Create := func(name, t string) *template.Template {
-	// 	return template.Must(template.New(name).Parse(t))
-	// }
+	Create := func(name, t string) *template.Template {
+		return template.Must(template.New(name).Parse(t))
+	}
 
-	// t2 := Create("t2", "Name: {{.Name}}\n")
+	t2 := Create("t2", "Name: {{.Name}}\n")
 
-	// t2.Execute(os.Stdout, struct {
-	// 	Name string
-	// }{"Jane Doe"})
+	t2.Execute(os.Stdout, struct {
+		Name string
+	}{"Jane Doe"})
 
-	// t2.Execute(os.Stdout, map[string]string{
-	// 	"Name": "Mickey Mouse",
-	// })
+	t2.Execute(os.Stdout, map[string]string{
+		"Name": "Mickey Mouse",
+	})
 
 	// t3 := Create("t3",
 	// 	"{{if . -}} yes {{else -}} no {{end}}\n")
