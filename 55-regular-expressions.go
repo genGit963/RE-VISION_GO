@@ -19,7 +19,21 @@ func learn_regular_expression() {
 	match, _ := regexp.MatchString("p([a-z]+)ch", "prekdjafjfajfadach")
 	fmt.Print(match)
 
-	// r, _ := regexp
+	/*
+		Above we used a string pattern directly,
+		but for other regexp tasks
+
+		you’ll need to Compile an optimized Regexp struct.
+	*/
+	r, _ := regexp.Compile("p([a-z]+)ch")
+
+	fmt.Println(r.MatchString("peach"))
+
+	fmt.Println(r.FindString("peach punch"))
+
+	fmt.Println("idx: ", r.FindStringIndex("peach punch"))
+
+	fmt.Println(r.FindStringSubmatch("peach punch"))
 }
 
 func main() {
