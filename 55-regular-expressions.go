@@ -45,6 +45,8 @@ func learn_regular_expression() {
 	r = regexp.MustCompile("p([a-z]+)ch")
 	fmt.Println("regexp:", r)
 
+	// replace
+
 	fmt.Println(r.ReplaceAllString("a peach", "<fruit>"))
 
 	in := []byte("a peach")
@@ -53,7 +55,7 @@ func learn_regular_expression() {
 
 }
 
-func main() {
-	learn_regular_expression()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_regular_expression()
+// 	println("\n-------------------------------")
+// }
