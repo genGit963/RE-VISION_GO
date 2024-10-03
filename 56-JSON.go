@@ -32,6 +32,9 @@ func learn_JSON() {
 	bloB, _ := json.Marshal(true)
 	fmt.Println(string(bloB))
 
+	intB, _ := json.Marshal(1)
+	fmt.Println(string(intB))
+
 }
 
 func main() {
