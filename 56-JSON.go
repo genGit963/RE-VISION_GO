@@ -41,6 +41,11 @@ func learn_JSON() {
 	strB, _ := json.Marshal("gopher")
 	fmt.Println(string(strB))
 
+	// slices and maps, which encode to JSON arrays and objects as you’d expect.
+	slcD := []string{"apple", "peach", "pear"}
+	slcB, _ := json.Marshal(slcD)
+	fmt.Println(slcB)
+
 }
 
 func main() {
