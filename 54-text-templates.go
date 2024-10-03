@@ -63,15 +63,22 @@ func learn_text_Template() {
 	t3.Execute(os.Stdout, "not empty")
 	t3.Execute(os.Stdout, "")
 
-	// t4 := Create("t4",
-	// 	"Range: {{range .}}{{.}} {{end}}\n")
-	// t4.Execute(os.Stdout,
-	// 	[]string{
-	// 		"Go",
-	// 		"Rust",
-	// 		"C++",
-	// 		"C#",
-	// 	})
+	/*
+		range blocks let us loop through
+		"slices, arrays, maps or channels".
+
+		Inside the range block {{.}} is
+		set to the current item of the iteration.
+	*/
+	t4 := Create("t4",
+		"Range: {{range .}}{{.}} {{end}}\n")
+	t4.Execute(os.Stdout,
+		[]string{
+			"Go",
+			"Rust",
+			"C++",
+			"C#",
+		})
 }
 
 func main() {
