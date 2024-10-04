@@ -36,7 +36,7 @@ func learn_Epoch() {
 	fmt.Println(time.Unix(0, now.UnixNano()))
 }
 
-func main() {
-	learn_Epoch()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Epoch()
+// 	println("\n-------------------------------")
+// }
