@@ -23,7 +23,7 @@ func learn_number_parsing() {
 	fmt.Println(i)
 
 	// ParseInt will recognize hex-formatted numbers.
-	d, _ := strconv.ParseInt("0x1c8", 0, 64)
+	d, _ := strconv.ParseInt("17", 0, 64)
 	fmt.Println(d)
 	// A ParseUint is also available.
 
