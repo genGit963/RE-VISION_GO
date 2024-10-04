@@ -17,11 +17,11 @@ func learn_random_number() {
 	fmt.Print(rand.IntN(100), ",")
 	fmt.Print(rand.IntN(100))
 	fmt.Println()
+
 	// rand.Float64 returns a float64 f, 0.0 <= f < 1.0.
-
 	fmt.Println(rand.Float64())
-	// This can be used to generate random floats in other ranges, for example 5.0 <= f' < 10.0.
 
+	// This can be used to generate random floats in other ranges, for example 5.0 <= f' < 10.0.
 	fmt.Print((rand.Float64()*5)+5, ",")
 	fmt.Print((rand.Float64() * 5) + 5)
 	fmt.Println()
@@ -43,9 +43,9 @@ func learn_random_number() {
 	fmt.Print(r3.IntN(100), ",")
 	fmt.Print(r3.IntN(100))
 	fmt.Println()
+}
 
-}
-func main() {
-	learn_random_number()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_random_number()
+// 	println("\n-------------------------------")
+// }
