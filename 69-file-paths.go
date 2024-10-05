@@ -29,7 +29,6 @@ func learn_file_paths() {
 		You should always use Join instead of concatenating /s or \s manually.
 		In addition to providing portability,
 		Join will also normalize paths by removing superfluous separators and directory changes.
-
 	*/
 	fmt.Println(filepath.Join("dir1//", "filename"))
 	fmt.Println(filepath.Join("dir1/../dir1", "filename"))
@@ -38,22 +37,24 @@ func learn_file_paths() {
 		Dir and Base can be used to split a path to the directory and the file.
 		Alternatively, Split will return both in the same call.
 	*/
-	//     fmt.Println("Dir(p):", filepath.Dir(p))
-	//     fmt.Println("Base(p):", filepath.Base(p))
-	// We can check whether a path is absolute.
+	fmt.Println("Dir(p):", filepath.Dir(p))
+	fmt.Println("Base(p):", filepath.Base(p))
 
-	//     fmt.Println(filepath.IsAbs("dir/file"))
-	//     fmt.Println(filepath.IsAbs("/dir/file"))
-	//     filename := "config.json"
-	// Some file names have extensions following a dot. We can split the extension out of such names with Ext.
+	// // We can check whether a path is absolute.
+	// fmt.Println(filepath.IsAbs("dir/file"))
+	// fmt.Println(filepath.IsAbs("/dir/file"))
+	// filename := "config.json"
 
-	//     ext := filepath.Ext(filename)
-	//     fmt.Println(ext)
-	// To find the file’s name with the extension removed, use strings.TrimSuffix.
+	// // Some file names have extensions following a dot.
+	// // We can split the extension out of such names with Ext.
+	// ext := filepath.Ext(filename)
+	// fmt.Println(ext)
 
-	//     fmt.Println(strings.TrimSuffix(filename, ext))
-	// Rel finds a relative path between a base and a target. It returns an error if the target cannot be made relative to base.
+	// // To find the file’s name with the extension removed, use strings.TrimSuffix.
+	// fmt.Println(strings.TrimSuffix(filename, ext))
 
+	// Rel finds a relative path between a base and a target.
+	// It returns an error if the target cannot be made relative to base.
 	// rel, err := filepath.Rel("a/b", "a/b/t/file")
 	//
 	//	if err != nil {
