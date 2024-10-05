@@ -73,7 +73,7 @@ func checking_err(e error) {
 	}
 }
 
-func main() {
-	learn_temporary_files_and_directories()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_temporary_files_and_directories()
+// 	println("\n-------------------------------")
+// }
