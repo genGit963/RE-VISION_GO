@@ -23,6 +23,14 @@ func learn_base64_encoding() {
 	sEnc := b64.StdEncoding.EncodeToString([]byte(data))
 	fmt.Println("base64 encode: ", sEnc)
 
+	/*
+		Decoding may return an error, which you can check
+		if you don’t already know the input to be well-formed.
+	*/
+	sDec, _ := b64.StdEncoding.DecodeString(sEnc)
+	fmt.Println("decode:", string(sDec))
+	fmt.Println()
+
 }
 
 func main() {
