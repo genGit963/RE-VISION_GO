@@ -54,22 +54,21 @@ func learn_file_paths() {
 	// To find the file’s name with the extension removed, use strings.TrimSuffix.
 	fmt.Println(strings.TrimSuffix(filename, ext))
 
-	// Rel finds a relative path between a base and a target.
-	// It returns an error if the target cannot be made relative to base.
-	// rel, err := filepath.Rel("a/b", "a/b/t/file")
-	//
-	//	if err != nil {
-	//	    panic(err)
-	//	}
-	//
-	// fmt.Println(rel)
-	// rel, err = filepath.Rel("a/b", "a/c/t/file")
-	//
-	//	if err != nil {
-	//	    panic(err)
-	//	}
-	//
-	// fmt.Println(rel)
+	/*
+		Rel finds a relative path between a base and a target.
+		It returns an error if the target cannot be made relative to base.
+	*/
+	rel, err := filepath.Rel("a/b", "a/b/t/file")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(rel)
+
+	rel, err = filepath.Rel("a/b", "a/c/t/file")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Println(rel)
 }
 
 func main() {
