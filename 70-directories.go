@@ -23,11 +23,14 @@ func learn_directories() {
 	err := os.Mkdir("subdir", 0755)
 	checking_error(err)
 
-	// When creating temporary directories, it’s good practice to defer their removal. os.RemoveAll will delete a whole directory tree (similarly to rm -rf).
+	/*
+		When creating temporary directories,
+		it’s good practice to defer their removal.
+		os.RemoveAll will delete a whole directory tree (similarly to rm -rf).
+	*/
+	defer os.RemoveAll("subdir")
 
-	//     defer os.RemoveAll("subdir")
 	// Helper function to create a new empty file.
-
 	//     createEmptyFile := func(name string) {
 	//         d := []byte("")
 	//         checking_error(os.WriteFile(name, d, 0644))
