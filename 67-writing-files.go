@@ -20,11 +20,11 @@ func learn_writing_file() {
 
 	// To start, here’s how to dump a string (or just bytes) into a file.
 	d1 := []byte("hello\ngo\n")
-	err := os.WriteFile("sample_write.txt", d1, 0644)
+	err := os.WriteFile("sample_write1.txt", d1, 0644)
 	checking(err)
 
 	// For more granular writes, open a file for writing.
-	f, err := os.Create("sample_write.txt")
+	f, err := os.Create("sample_write2.txt")
 	checking(err)
 
 	// It’s idiomatic to "defer" a Close immediately after opening a file.
