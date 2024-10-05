@@ -56,7 +56,7 @@ func learn_writing_file() {
 	w.Flush()
 }
 
-func main() {
-	learn_writing_file()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_writing_file()
+// 	println("\n-------------------------------")
+// }
