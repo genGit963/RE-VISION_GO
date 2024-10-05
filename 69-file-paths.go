@@ -71,7 +71,7 @@ func learn_file_paths() {
 	fmt.Println(rel)
 }
 
-func main() {
-	learn_file_paths()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_file_paths()
+// 	println("\n-------------------------------")
+// }
