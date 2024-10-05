@@ -31,20 +31,22 @@ func learn_directories() {
 	defer os.RemoveAll("subdir")
 
 	// Helper function to create a new empty file.
-	//     createEmptyFile := func(name string) {
-	//         d := []byte("")
-	//         checking_error(os.WriteFile(name, d, 0644))
-	//     }
-	//     createEmptyFile("subdir/file1")
-	// We can create a hierarchy of directories, including parents with MkdirAll. This is similar to the command-line mkdir -p.
+	createEmptyFile := func(name string) {
+		d := []byte("")
+		checking_error(os.WriteFile(name, d, 0644))
+	}
+	createEmptyFile("subdir/file1")
+	/*
+		We can create a hierarchy of directories,
+		 including parents with MkdirAll. This is similar to the command-line mkdir -p.
+	*/
+	err = os.MkdirAll("subdir/parent/child", 0755)
+	checking_error(err)
+	createEmptyFile("subdir/parent/file2")
+	createEmptyFile("subdir/parent/file3")
+	createEmptyFile("subdir/parent/child/file4")
 
-	//     err = os.MkdirAll("subdir/parent/child", 0755)
-	//     checking_error(err)
-	//     createEmptyFile("subdir/parent/file2")
-	//     createEmptyFile("subdir/parent/file3")
-	//     createEmptyFile("subdir/parent/child/file4")
 	// ReadDir lists directory contents, returning a slice of os.DirEntry objects.
-
 	//     c, err := os.ReadDir("subdir/parent")
 	//     checking_error(err)
 	//     fmt.Println("Listing subdir/parent")
