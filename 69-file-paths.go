@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"path/filepath"
+	"strings"
 )
 
 /*
@@ -50,8 +51,8 @@ func learn_file_paths() {
 	ext := filepath.Ext(filename)
 	fmt.Println(ext)
 
-	// // To find the file’s name with the extension removed, use strings.TrimSuffix.
-	// fmt.Println(strings.TrimSuffix(filename, ext))
+	// To find the file’s name with the extension removed, use strings.TrimSuffix.
+	fmt.Println(strings.TrimSuffix(filename, ext))
 
 	// Rel finds a relative path between a base and a target.
 	// It returns an error if the target cannot be made relative to base.
