@@ -25,12 +25,19 @@ func learn_file_paths() {
 	p := filepath.Join("dir1", "dir2", "filename")
 	fmt.Println("p:", p)
 
-	// You should always use Join instead of concatenating /s or \s manually. In addition to providing portability, Join will also normalize paths by removing superfluous separators and directory changes.
+	/*
+		You should always use Join instead of concatenating /s or \s manually.
+		In addition to providing portability,
+		Join will also normalize paths by removing superfluous separators and directory changes.
 
-	//     fmt.Println(filepath.Join("dir1//", "filename"))
-	//     fmt.Println(filepath.Join("dir1/../dir1", "filename"))
-	// Dir and Base can be used to split a path to the directory and the file. Alternatively, Split will return both in the same call.
+	*/
+	fmt.Println(filepath.Join("dir1//", "filename"))
+	fmt.Println(filepath.Join("dir1/../dir1", "filename"))
 
+	/*
+		Dir and Base can be used to split a path to the directory and the file.
+		Alternatively, Split will return both in the same call.
+	*/
 	//     fmt.Println("Dir(p):", filepath.Dir(p))
 	//     fmt.Println("Base(p):", filepath.Base(p))
 	// We can check whether a path is absolute.
