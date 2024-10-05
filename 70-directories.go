@@ -28,7 +28,7 @@ func learn_directories() {
 		it’s good practice to defer their removal.
 		os.RemoveAll will delete a whole directory tree (similarly to rm -rf).
 	*/
-	defer os.RemoveAll("subdir")
+	// defer os.RemoveAll("subdir")
 
 	// Helper function to create a new empty file.
 	createEmptyFile := func(name string) {
