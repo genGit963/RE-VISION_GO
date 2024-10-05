@@ -88,7 +88,7 @@ func learn_reading_files() {
 
 }
 
-func main() {
-	learn_reading_files()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_reading_files()
+// 	println("\n-------------------------------")
+// }
