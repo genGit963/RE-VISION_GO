@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"io/fs"
 	"os"
+	"path/filepath"
 )
 
 /*
@@ -47,35 +49,47 @@ func learn_directories() {
 	createEmptyFile("subdir/parent/child/file4")
 
 	// ReadDir lists directory contents, returning a slice of os.DirEntry objects.
-	//     c, err := os.ReadDir("subdir/parent")
-	//     checking_error(err)
-	//     fmt.Println("Listing subdir/parent")
-	//     for _, entry := range c {
-	//         fmt.Println(" ", entry.Name(), entry.IsDir())
-	//     }
+	c, err := os.ReadDir("subdir/parent")
+	checking_error(err)
+	fmt.Println("Listing subdir/parent")
+	for _, entry := range c {
+		fmt.Println(" ", entry.Name(), entry.IsDir())
+	}
+
 	// Chdir lets us change the current working directory, similarly to cd.
+	err = os.Chdir("subdir/parent/child")
+	checking_error(err)
 
-	//     err = os.Chdir("subdir/parent/child")
-	//     checking_error(err)
 	// Now we’ll see the contents of subdir/parent/child when listing the current directory.
+	c, err = os.ReadDir(".")
+	checking_error(err)
+	fmt.Println("Listing subdir/parent/child")
+	for _, entry := range c {
+		fmt.Println(" ", entry.Name(), entry.IsDir())
+	}
 
-	//     c, err = os.ReadDir(".")
-	//     checking_error(err)
-	//     fmt.Println("Listing subdir/parent/child")
-	//     for _, entry := range c {
-	//         fmt.Println(" ", entry.Name(), entry.IsDir())
-	//     }
 	// cd back to where we started.
-
-	//     err = os.Chdir("../../..")
-	//     checking_error(err)
-	// We can also visit a directory recursively, including all its sub-directories. WalkDir accepts a callback function to handle every file or directory visited.
-
-	// fmt.Println("Visiting subdir")
-	// err = filepath.WalkDir("subdir", visit)
+	err = os.Chdir("../../..")
+	checking_error(err)
+	/*
+		We can also visit a directory recursively,
+		including all its sub-directories.
+		WalkDir accepts a callback function to handle every file or directory visited.
+	*/
+	fmt.Println("Visiting subdir")
+	err = filepath.WalkDir("subdir", visit)
 }
 
-func main() {
-	learn_directories()
-	println("\n-------------------------------")
+// visit is called for every file or directory found recursively by filepath.WalkDir.
+func visit(path string, d fs.DirEntry, err error) error {
+	if err != nil {
+		return err
+	}
+	fmt.Println(" ", path, d.IsDir())
+	return nil
 }
+
+// func main() {
+// 	learn_directories()
+// 	println("\n-------------------------------")
+// }
