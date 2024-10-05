@@ -24,6 +24,7 @@ func learn_topic() {
 	}
 
 	// Accessing the scheme is straightforward.
+	fmt.Println(u)
 	fmt.Println(u.Scheme)
 
 	// User contains all authentication info; call Username and Password on this for individual values.
