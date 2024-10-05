@@ -22,7 +22,7 @@ func check(e error) {
 }
 func learn_reading_files() {
 	fmt.Println("\n------------ learn_reading_files --------------")
-	dat, err := os.ReadFile("defer.txt")
+	dat, err := os.ReadFile("sample.txt")
 	check(err)
 	// fmt.Print(dat)
 	fmt.Print(string(dat))
@@ -33,7 +33,7 @@ func learn_reading_files() {
 
 		For these tasks, start by Opening a file to obtain an os.File value.
 	*/
-	f, err := os.Open("defer.txt")
+	f, err := os.Open("sample.txt")
 	check(err)
 
 	/*
@@ -43,7 +43,7 @@ func learn_reading_files() {
 	b1 := make([]byte, 5)
 	n1, err := f.Read(b1)
 	check(err)
-	fmt.Printf("read: %d bytes: %s\n", n1, string(b1[:n1]))
+	fmt.Printf("\nread: %d bytes: %s\n", n1, string(b1[:n1]))
 
 	// You can also Seek to a known location in the file and Read from there.
 	o2, err := f.Seek(6, io.SeekStart)
@@ -73,14 +73,17 @@ func learn_reading_files() {
 
 	_, err = f.Seek(0, io.SeekStart)
 	check(err)
-	// The bufio package implements a buffered reader that may be useful both for its efficiency with many small reads and because of the additional reading methods it provides.
 
+	/*
+		The bufio package implements a buffered reader that may be useful both for
+		its efficiency with many small reads
+		and because of the additional reading methods it provides.
+	*/
 	r4 := bufio.NewReader(f)
 	b4, err := r4.Peek(5)
 	check(err)
 	fmt.Printf("5 bytes: %s\n", string(b4))
 	// Close the file when you’re done (usually this would be scheduled immediately after Opening with defer).
-
 	f.Close()
 
 }

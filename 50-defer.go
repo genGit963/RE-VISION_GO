@@ -25,7 +25,7 @@ func learn_defer() {
 
 		Here’s how we could do that with defer.
 	*/
-	f := createFile("defer.txt")
+	f := createFile("sample.txt")
 
 	/*
 		Immediately after getting a file object with createFile,
