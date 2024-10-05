@@ -40,15 +40,15 @@ func learn_file_paths() {
 	fmt.Println("Dir(p):", filepath.Dir(p))
 	fmt.Println("Base(p):", filepath.Base(p))
 
-	// // We can check whether a path is absolute.
-	// fmt.Println(filepath.IsAbs("dir/file"))
-	// fmt.Println(filepath.IsAbs("/dir/file"))
-	// filename := "config.json"
+	// We can check whether a path is absolute.
+	fmt.Println(filepath.IsAbs("dir/file"))
+	fmt.Println(filepath.IsAbs("/dir/file"))
 
-	// // Some file names have extensions following a dot.
-	// // We can split the extension out of such names with Ext.
-	// ext := filepath.Ext(filename)
-	// fmt.Println(ext)
+	filename := "config.json"
+	// Some file names have extensions following a dot.
+	// We can split the extension out of such names with Ext.
+	ext := filepath.Ext(filename)
+	fmt.Println(ext)
 
 	// // To find the file’s name with the extension removed, use strings.TrimSuffix.
 	// fmt.Println(strings.TrimSuffix(filename, ext))
