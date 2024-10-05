@@ -36,8 +36,8 @@ func learn_sha256_hashes() {
 	*/
 	bs := h.Sum(nil)
 
-	fmt.Println(s)
-	fmt.Printf("%x\n", bs)
+	fmt.Println("plain text: ", s)
+	fmt.Printf("hash: %x\n", bs)
 }
 
 func main() {
