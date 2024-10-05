@@ -24,16 +24,18 @@ func learn_writing_file() {
 	checking(err)
 
 	// For more granular writes, open a file for writing.
-	//     f, err := os.Create("/tmp/dat2")
-	//     checking(err)
-	// It’s idiomatic to defer a Close immediately after opening a file.
-	//     defer f.Close()
-	// You can Write byte slices as you’d expect.
+	f, err := os.Create("sample_write.txt")
+	checking(err)
 
-	//     d2 := []byte{115, 111, 109, 101, 10}
-	//     n2, err := f.Write(d2)
-	//     checking(err)
-	//     fmt.Printf("wrote %d bytes\n", n2)
+	// It’s idiomatic to "defer" a Close immediately after opening a file.
+	defer f.Close()
+
+	// You can Write byte slices as you’d expect.
+	// d2 := []byte{115, 111, 109, 101, 10}
+	// n2, err := f.Write(d2)
+	// checking(err)
+	// fmt.Printf("wrote %d bytes\n", n2)
+
 	// A WriteString is also available.
 
 	//     n3, err := f.WriteString("writes\n")
