@@ -18,6 +18,9 @@ using built in library "crypto/sha256"
 For example,
 TLS/SSL certificates use SHA256 to compute a certificate’s signature.
 Here’s how to compute SHA256 hashes in Go.
+
+---> SHA512 Hashes<---
+to compute SHA512 hashes import crypto/sha512 and use sha512.New().
 */
 
 func learn_sha256_hashes() {
@@ -40,7 +43,7 @@ func learn_sha256_hashes() {
 	fmt.Printf("hash: %x\n", bs)
 }
 
-func main() {
-	learn_sha256_hashes()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_sha256_hashes()
+// 	println("\n-------------------------------")
+// }
