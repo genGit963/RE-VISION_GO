@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"net"
 	"net/url"
 )
 
@@ -32,10 +33,10 @@ func learn_topic() {
 	fmt.Println(p)
 
 	// The Host contains both the hostname and the port, if present. Use SplitHostPort to extract them.
-	//     fmt.Println(u.Host)
-	//     host, port, _ := net.SplitHostPort(u.Host)
-	//     fmt.Println(host)
-	//     fmt.Println(port)
+	fmt.Println(u.Host)
+	host, port, _ := net.SplitHostPort(u.Host)
+	fmt.Println(host)
+	fmt.Println(port)
 
 	// Here we extract the path and the fragment after the #.
 	//     fmt.Println(u.Path)
