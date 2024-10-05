@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"path/filepath"
 )
 
 /*
@@ -26,7 +27,7 @@ func learn_temporary_files_and_directories() {
 		in the default location for our OS.
 	*/
 	f, err := os.CreateTemp("", "sample")
-	check(err)
+	checking_err(err)
 	/*
 	   Display the name of the temporary file.
 	   On Unix-based OSes the directory will likely be /tmp.
@@ -47,21 +48,27 @@ func learn_temporary_files_and_directories() {
 
 	// We can write some data to the file.
 	_, err = f.Write([]byte{1, 2, 3, 4})
-	check(err)
+	checking_err(err)
 
-	// If we intend to write many temporary files, we may prefer to create a temporary directory. os.MkdirTemp’s arguments are the same as CreateTemp’s, but it returns a directory name rather than an open file.
-	//     dname, err := os.MkdirTemp("", "sampledir")
-	//     check(err)
-	//     fmt.Println("Temp dir name:", dname)
-	//     defer os.RemoveAll(dname)
+	/*
+		If we intend to write many temporary files,
+		we may prefer to create a temporary directory.
+
+		os.MkdirTemp’s arguments are the same as CreateTemp’s,
+		but it returns a directory name rather than an open file.
+	*/
+	dname, err := os.MkdirTemp("", "sampledir")
+	checking_err(err)
+	fmt.Println("Temp dir name:", dname)
+	defer os.RemoveAll(dname)
+
 	// Now we can synthesize temporary file names by prefixing them with our temporary directory.
-
-	//     fname := filepath.Join(dname, "file1")
-	//     err = os.WriteFile(fname, []byte{1, 2}, 0666)
-	//     check(err)
+	fname := filepath.Join(dname, "file1")
+	err = os.WriteFile(fname, []byte{1, 2}, 0666)
+	checking_err(err)
 
 }
-func check(e error) {
+func checking_err(e error) {
 	if e != nil {
 		panic(e)
 	}
