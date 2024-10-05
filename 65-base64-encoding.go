@@ -39,7 +39,7 @@ func learn_base64_encoding() {
 
 }
 
-func main() {
-	learn_base64_encoding()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_base64_encoding()
+// 	println("\n-------------------------------")
+// }
