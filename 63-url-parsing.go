@@ -24,9 +24,10 @@ func learn_topic() {
 
 	// Accessing the scheme is straightforward.
 	fmt.Println(u.Scheme)
+
 	// User contains all authentication info; call Username and Password on this for individual values.
-	//     fmt.Println(u.User)
-	//     fmt.Println(u.User.Username())
+	fmt.Println(u.User)
+	fmt.Println(u.User.Username())
 	//     p, _ := u.User.Password()
 	//     fmt.Println(p)
 	// The Host contains both the hostname and the port, if present. Use SplitHostPort to extract them.
