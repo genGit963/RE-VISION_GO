@@ -15,7 +15,7 @@ https://adam.herokuapp.com/past/2010/3/30/urls_are_the_uniform_way_to_locate_res
 func learn_topic() {
 	fmt.Println("\n------------ learn_topic --------------")
 	s := "postgres://user:pass@host.com:5432/path?k=v#f"
-	fmt.Println(s)
+	fmt.Println("url: ", s)
 
 	// Parse the URL and ensure there are no errors.
 	u, err := url.Parse(s)
