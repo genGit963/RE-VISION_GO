@@ -24,6 +24,7 @@ func learn_reading_files() {
 	fmt.Println("\n------------ learn_reading_files --------------")
 	dat, err := os.ReadFile("defer.txt")
 	check(err)
+	fmt.Print(dat)
 	fmt.Print(string(dat))
 
 	// You’ll often want more control over how and what
