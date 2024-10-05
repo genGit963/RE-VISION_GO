@@ -31,6 +31,12 @@ func learn_base64_encoding() {
 	fmt.Println("decode:", string(sDec))
 	fmt.Println()
 
+	// This encodes/decodes using a URL-compatible base64 format.
+	uEnc := b64.URLEncoding.EncodeToString([]byte(data))
+	fmt.Println(uEnc)
+	uDec, _ := b64.URLEncoding.DecodeString(uEnc)
+	fmt.Println(string(uDec))
+
 }
 
 func main() {
