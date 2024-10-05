@@ -66,7 +66,6 @@ func learn_temporary_files_and_directories() {
 	fname := filepath.Join(dname, "file1")
 	err = os.WriteFile(fname, []byte{1, 2}, 0666)
 	checking_err(err)
-
 }
 func checking_err(e error) {
 	if e != nil {
