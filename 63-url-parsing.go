@@ -56,7 +56,7 @@ func learn_topic() {
 
 }
 
-func main() {
-	learn_topic()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_topic()
+// 	println("\n-------------------------------")
+// }
