@@ -31,8 +31,9 @@ func learn_writing_file() {
 	defer f.Close()
 
 	// You can Write byte slices as you’d expect.
-	d2 := []byte{115, 45, 111, 109, 101, 10}
-	n2, err := f.Write(d2)
+	d2 := "dkjafja"
+	// d2 := []byte{115, 45, 111, 109, 101, 10}
+	n2, err := f.Write(make([]byte, len(d2)))
 	checking(err)
 	fmt.Printf("wrote %d bytes\n", n2)
 
