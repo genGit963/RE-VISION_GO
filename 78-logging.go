@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"log"
+	"log/slog"
 	"os"
 )
 
@@ -60,24 +62,24 @@ func learn_logging() {
 
 	/*
 		Loggers can have custom output targets; any io.Writer works.
-
 	*/
-	//     var buf bytes.Buffer
-	//     buflog := log.New(&buf, "buf:", log.LstdFlags)
+	var buf bytes.Buffer
+	buflog := log.New(&buf, "buf:", log.LstdFlags)
+
 	// This call writes the log output into buf.
+	buflog.Println("hello")
 
-	//     buflog.Println("hello")
 	// This will actually show it on standard output.
+	fmt.Print("from buflog:", buf.String())
 
-	//     fmt.Print("from buflog:", buf.String())
-	// The slog package provides structured log output. For example, logging in JSON format is straightforward.
+	// The slog package provides structured log output.
+	// For example, logging in JSON format is straightforward.
+	jsonHandler := slog.NewJSONHandler(os.Stderr, nil)
+	myslog := slog.New(jsonHandler)
+	myslog.Info("hi there")
 
-	//     jsonHandler := slog.NewJSONHandler(os.Stderr, nil)
-	//     myslog := slog.New(jsonHandler)
-	//     myslog.Info("hi there")
 	// In addition to the message, slog output can contain an arbitrary number of key=value pairs.
-
-	//     myslog.Info("hello again", "key", "val", "age", 25)
+	myslog.Info("hello again", "key", "val", "age", 25)
 
 }
 
