@@ -31,9 +31,7 @@ func learn_command_line_flags() {
 
 	/*
 		It’s also possible to declare an option that
-
 		uses an existing var declared elsewhere in the program.
-
 		Note that we need to pass in a pointer to the flag declaration function.
 	*/
 	var svar string
