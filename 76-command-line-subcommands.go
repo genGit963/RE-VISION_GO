@@ -57,7 +57,7 @@ func learn_command_line_subcommands() {
 
 }
 
-func main() {
-	learn_command_line_subcommands()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_command_line_subcommands()
+// 	println("\n-------------------------------")
+// }
