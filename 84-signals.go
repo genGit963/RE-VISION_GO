@@ -66,7 +66,7 @@ func learn_signals() {
 	fmt.Println("exiting")
 }
 
-func main() {
-	learn_signals()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_signals()
+// 	println("\n-------------------------------")
+// }
