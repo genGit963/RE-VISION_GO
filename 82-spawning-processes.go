@@ -106,7 +106,7 @@ func learn_spawning_processes() {
 	fmt.Println(string(lsOut))
 }
 
-func main() {
-	learn_spawning_processes()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_spawning_processes()
+// 	println("\n-------------------------------")
+// }
