@@ -43,7 +43,7 @@ func learn_environment_variable() {
 
 }
 
-func main() {
-	learn_environment_variable()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_environment_variable()
+// 	println("\n-------------------------------")
+// }

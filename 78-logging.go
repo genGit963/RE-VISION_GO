@@ -1,0 +1,34 @@
+package main
+
+import (
+	"fmt"
+	"log"
+)
+
+/*
+---> Logging <---
+The Go standard library provides straightforward tools for outputting logs
+from Go programs,
+
+with the log package for free-form output
+and the log/slog package for structured output.
+*/
+
+func learn_logging() {
+	fmt.Println("\n------------ learn_logging --------------")
+
+	/*
+		Simply invoking functions like Println from the log package
+		uses the standard logger,
+
+		which is already pre-configured for reasonable
+		logging output to os.Stderr.
+		Additional methods like Fatal* or Panic* will exit the program after logging.
+	*/
+	log.Println("standard logger")
+}
+
+func main() {
+	learn_logging()
+	println("\n-------------------------------")
+}
