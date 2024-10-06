@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
+	"os"
 )
 
 /*
@@ -29,12 +30,9 @@ func learn_logging() {
 
 	/*
 		Loggers can be configured with flags to set their output format.
-
 		By default, the standard logger has the log.Ldate
 		and log.Ltime flags set, and these are collected in log.LstdFlags.
-
 		We can change its flags to emit time with microsecond accuracy,
-
 		for example.
 	*/
 	log.SetFlags(log.LstdFlags | log.Lmicroseconds)
@@ -44,16 +42,26 @@ func learn_logging() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	log.Println("with file/line")
 
-	// It may be useful to create a custom logger and pass it around. When creating a new logger, we can set a prefix to distinguish its output from other loggers.
+	/*
+		It may be useful to create a custom logger and pass it around.
+		When creating a new logger, we can set a prefix to distinguish
+		its output from other loggers.
+	*/
+	mylog := log.New(os.Stdout, "my:", log.LstdFlags)
+	mylog.Println("from mylog")
 
-	//     mylog := log.New(os.Stdout, "my:", log.LstdFlags)
-	//     mylog.Println("from mylog")
-	// We can set the prefix on existing loggers (including the standard one) with the SetPrefix method.
+	/*
+		We can set the prefix on existing loggers
+		(including the standard one)
+		with the SetPrefix method.
+	*/
+	mylog.SetPrefix("ohmy:")
+	mylog.Println("from mylog")
 
-	//     mylog.SetPrefix("ohmy:")
-	//     mylog.Println("from mylog")
-	// Loggers can have custom output targets; any io.Writer works.
+	/*
+		Loggers can have custom output targets; any io.Writer works.
 
+	*/
 	//     var buf bytes.Buffer
 	//     buflog := log.New(&buf, "buf:", log.LstdFlags)
 	// This call writes the log output into buf.
