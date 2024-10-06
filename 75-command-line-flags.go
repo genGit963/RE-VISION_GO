@@ -54,7 +54,7 @@ func learn_command_line_flags() {
 	fmt.Println("tail:", flag.Args())
 }
 
-func main() {
-	learn_command_line_flags()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_command_line_flags()
+// 	println("\n-------------------------------")
+// }
