@@ -83,7 +83,7 @@ func learn_logging() {
 
 }
 
-func main() {
-	learn_logging()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_logging()
+// 	println("\n-------------------------------")
+// }
