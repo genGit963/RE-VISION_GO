@@ -51,7 +51,7 @@ func learn_embed_directive() {
 	print(string(content2))
 }
 
-func main() {
-	learn_embed_directive()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_embed_directive()
+// 	println("\n-------------------------------")
+// }
