@@ -25,7 +25,7 @@ func learn_HTTP_client() {
 		it uses the http.DefaultClient object which has useful default settings.
 	*/
 	resp, err := http.Get("https://bogatimahesh.com.np")
-	fmt.Println("response: ", resp.Body)
+	fmt.Println("response: ", resp)
 	if err != nil {
 		panic(err)
 	}
