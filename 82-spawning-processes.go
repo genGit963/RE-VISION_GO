@@ -96,8 +96,8 @@ func learn_spawning_processes() {
 		If you want to spawn a full command with a string,
 		you can use bash’s -c option:
 	*/
-	// lsCmd := exec.Command("bash", "-c", "ls -a -l -h")
-	lsCmd := exec.Command("bash", "-c", "pwd")
+	lsCmd := exec.Command("bash", "-c", "ls -a -l -h")
+	// lsCmd := exec.Command("bash", "-c", "pwd")
 	lsOut, err := lsCmd.Output()
 	if err != nil {
 		panic(err)
