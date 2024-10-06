@@ -32,7 +32,7 @@ func learn_Command_line_argumet() {
 	fmt.Println(arg)
 }
 
-func main() {
-	learn_Command_line_argumet()
-	println("\n-------------------------------")
-}
+// func main() {
+// 	learn_Command_line_argumet()
+// 	println("\n-------------------------------")
+// }
