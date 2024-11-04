@@ -52,41 +52,6 @@ Here's a markdown-structured list of Go language symbols, grouped by type, with 
 | `<=`   | Less Than or Equal    | Checks if a value is less than or equal to another.    |
 | `>=`   | Greater Than or Equal | Checks if a value is greater than or equal to another. |
 
-### Logical Operators
-
-| Symbol | Name        | Description                               |
-| ------ | ----------- | ----------------------------------------- | ---------- | --------------------------------------------- |
-| `&&`   | Logical AND | Returns true if both operands are true.   |
-| `      |             | `                                         | Logical OR | Returns true if at least one operand is true. |
-| `!`    | Logical NOT | Reverses the Boolean value of an operand. |
-
-### Bitwise Operators
-
-| Symbol | Name                | Description                             |
-| ------ | ------------------- | --------------------------------------- | ------------------------------- |
-| `&`    | Bitwise AND         | Performs a binary AND operation.        |
-| `      | `                   | Bitwise OR                              | Performs a binary OR operation. |
-| `^`    | Bitwise XOR         | Performs a binary XOR operation.        |
-| `&^`   | Bit Clear (AND NOT) | Clears specific bits.                   |
-| `<<`   | Left Shift          | Shifts bits to the left, adding zeroes. |
-| `>>`   | Right Shift         | Shifts bits to the right.               |
-
-### Assignment Operators
-
-| Symbol | Name                   | Description                                       |
-| ------ | ---------------------- | ------------------------------------------------- | ---------------------------------------- |
-| `=`    | Assignment             | Assigns a value to a variable.                    |
-| `+=`   | Add and Assign         | Adds and assigns a value to a variable.           |
-| `-=`   | Subtract and Assign    | Subtracts and assigns a value to a variable.      |
-| `*=`   | Multiply and Assign    | Multiplies and assigns a value to a variable.     |
-| `/=`   | Divide and Assign      | Divides and assigns a value to a variable.        |
-| `%=`   | Modulus and Assign     | Finds the remainder and assigns it to a variable. |
-| `&=`   | Bitwise AND and Assign | Bitwise AND operation and assigns result.         |
-| `      | =`                     | Bitwise OR and Assign                             | Bitwise OR operation and assigns result. |
-| `^=`   | Bitwise XOR and Assign | Bitwise XOR operation and assigns result.         |
-| `<<=`  | Left Shift and Assign  | Left shifts and assigns to a variable.            |
-| `>>=`  | Right Shift and Assign | Right shifts and assigns to a variable.           |
-
 ## 4. **Special Symbols**
 
 | Symbol | Name                       | Description                                                             |
