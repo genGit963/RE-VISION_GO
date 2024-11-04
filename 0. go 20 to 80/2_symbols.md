@@ -27,46 +27,64 @@ These operators compare two values and return a boolean result.
 | `>=`   | Greater than or equal to | `a >= b` |
 | `<=`   | Less than or equal to    | `a <= b` |
 
-## 3. **Logical Operators**
+### 3. Logical Operators
 
 These operators perform logical operations and return boolean values.
 
-| Symbol | Meaning     | Example  |
-| ------ | ----------- | -------- | ---------- | --- | --- | --- |
-| `&&`   | Logical AND | `a && b` |
-| `      |             | `        | Logical OR | `a  |     | b`  |
-| `!`    | Logical NOT | `!a`     |
+- `&&`: Logical AND
+  - Example: `a && b`
+- `||`: Logical OR
+  - Example: `a || b`
+- `!`: Logical NOT
+  - Example: `!a`
 
-## 4. **Bitwise Operators**
+---
+
+### 4. Bitwise Operators
 
 These operators perform bit-level operations on integers.
 
-| Symbol | Meaning             | Example    |
-| ------ | ------------------- | ---------- | --- | --- |
-| `&`    | Bitwise AND         | `a & b`    |
-| `      | `                   | Bitwise OR | `a  | b`  |
-| `^`    | Bitwise XOR         | `a ^ b`    |
-| `&^`   | Bit clear (AND NOT) | `a &^ b`   |
-| `<<`   | Left shift          | `a << b`   |
-| `>>`   | Right shift         | `a >> b`   |
+- `&`: Bitwise AND
+  - Example: `a & b`
+- `|`: Bitwise OR
+  - Example: `a | b`
+- `^`: Bitwise XOR
+  - Example: `a ^ b`
+- `&^`: Bit clear (AND NOT)
+  - Example: `a &^ b`
+- `<<`: Left shift
+  - Example: `a << b`
+- `>>`: Right shift
+  - Example: `a >> b`
 
-## 5. **Assignment Operators**
+---
+
+### 5. Assignment Operators
 
 These operators assign values to variables.
 
-| Symbol | Meaning                | Example               |
-| ------ | ---------------------- | --------------------- | --- | ---- |
-| `=`    | Assignment             | `a = 5`               |
-| `+=`   | Add and assign         | `a += b`              |
-| `-=`   | Subtract and assign    | `a -= b`              |
-| `*=`   | Multiply and assign    | `a *= b`              |
-| `/=`   | Divide and assign      | `a /= b`              |
-| `%=`   | Modulus and assign     | `a %= b`              |
-| `&=`   | Bitwise AND and assign | `a &= b`              |
-| `      | =`                     | Bitwise OR and assign | `a  | = b` |
-| `^=`   | Bitwise XOR and assign | `a ^= b`              |
-| `<<=`  | Left shift and assign  | `a <<= b`             |
-| `>>=`  | Right shift and assign | `a >>= b`             |
+- `=`: Assignment
+  - Example: `a = 5`
+- `+=`: Add and assign
+  - Example: `a += b`
+- `-=`: Subtract and assign
+  - Example: `a -= b`
+- `*=`: Multiply and assign
+  - Example: `a *= b`
+- `/=`: Divide and assign
+  - Example: `a /= b`
+- `%=`: Modulus and assign
+  - Example: `a %= b`
+- `&=`: Bitwise AND and assign
+  - Example: `a &= b`
+- `|=`: Bitwise OR and assign
+  - Example: `a |= b`
+- `^=`: Bitwise XOR and assign
+  - Example: `a ^= b`
+- `<<=`: Left shift and assign
+  - Example: `a <<= b`
+- `>>=`: Right shift and assign
+  - Example: `a >>= b`
 
 ## 6. **Increment and Decrement Operators**
 
