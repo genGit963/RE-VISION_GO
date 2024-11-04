@@ -1,10 +1,9 @@
----
-
 # Go Language Cheat Sheet
 
 ## 1. Go Basics
 
 ### 1.1 Package Declaration
+
 - Every Go file starts with a `package` declaration.
 - `package main` indicates an entry point, requiring a `main` function to execute.
 
@@ -13,6 +12,7 @@ package main
 ```
 
 ### 1.2 Importing Packages
+
 - Use `import` to include libraries.
 
 ```go
@@ -26,6 +26,7 @@ import (
 ## 2. Variables and Constants
 
 ### 2.1 Declaring Variables
+
 - **Explicit declaration**: `var x int = 42`
 - **Type inference**: `var x = 42`
 - **Short variable declaration** (inside functions only): `x := 42`
@@ -36,6 +37,7 @@ age := 21 // Type inferred as int
 ```
 
 ### 2.2 Declaring Constants
+
 - Use `const` for values that do not change.
 
 ```go
@@ -49,11 +51,13 @@ const (
 ## 3. Data Types
 
 ### 3.1 Primitive Types
+
 - Integers: `int`, `int8`, `int16`, `int32`, `int64`
 - Floating points: `float32`, `float64`
 - Other types: `bool`, `string`, `byte`, `rune`
 
 ### 3.2 Composite Types
+
 - **Array**: Fixed-length, homogeneous
   ```go
   var arr [3]int = [3]int{1, 2, 3}
@@ -70,6 +74,7 @@ const (
 ## 4. Control Structures
 
 ### 4.1 If-Else
+
 - Conditions do not require parentheses.
 - Initialize variables inline with conditions.
 
@@ -82,6 +87,7 @@ if age := 21; age >= 18 {
 ```
 
 ### 4.2 Switch
+
 - Go’s `switch` automatically breaks after each case.
 - `default` handles all unmatched cases.
 
@@ -98,6 +104,7 @@ default:
 ```
 
 ### 4.3 For Loop
+
 - The only looping structure in Go.
 - Can be used as a traditional loop, infinite loop, or range-based loop.
 
@@ -110,6 +117,7 @@ for i := 0; i < 5; i++ {
 ## 5. Functions
 
 ### 5.1 Basic Function
+
 - Function declaration with parameters and return type.
 
 ```go
@@ -119,6 +127,7 @@ func add(a int, b int) int {
 ```
 
 ### 5.2 Multiple Return Values
+
 - Functions can return multiple values, commonly used for error handling.
 
 ```go
@@ -131,6 +140,7 @@ func divide(a, b int) (int, error) {
 ```
 
 ### 5.3 Variadic Functions
+
 - Allows a variable number of arguments.
 
 ```go
@@ -146,6 +156,7 @@ func sum(nums ...int) int {
 ## 6. Structs and Interfaces
 
 ### 6.1 Structs
+
 - Group fields together into a single type.
 
 ```go
@@ -158,6 +169,7 @@ p := Person{Name: "Alice", Age: 30}
 ```
 
 ### 6.2 Methods
+
 - Define methods on structs for object-oriented programming.
 
 ```go
@@ -167,6 +179,7 @@ func (p Person) Greet() string {
 ```
 
 ### 6.3 Interfaces
+
 - Define a set of method signatures without implementations.
 - A type satisfies an interface if it implements all the methods in the interface.
 
@@ -183,6 +196,7 @@ func Introduce(g Greeter) {
 ## 7. Pointers
 
 ### 7.1 Pointer Declaration and Usage
+
 - Pointers hold the memory address of variables.
 
 ```go
@@ -197,6 +211,7 @@ increment(&y)
 ## 8. Error Handling
 
 ### 8.1 Error Type and Custom Errors
+
 - Use the `error` type and the `errors.New` or `fmt.Errorf` for custom errors.
 
 ```go
@@ -209,6 +224,7 @@ func checkValue(val int) error {
 ```
 
 ### 8.2 Error Checking Pattern
+
 - Errors are checked and handled immediately after calling a function.
 
 ```go
@@ -220,13 +236,15 @@ if err := checkValue(-1); err != nil {
 ## 9. Concurrency
 
 ### 9.1 Goroutines
+
 - Lightweight threads managed by Go’s runtime.
-  
+
 ```go
 go someFunction()
 ```
 
 ### 9.2 Channels
+
 - Channels are used to communicate between goroutines.
 
 ```go
@@ -240,6 +258,7 @@ fmt.Println(<-ch)
 ## 10. Common Idioms and Patterns
 
 ### 10.1 Defer
+
 - `defer` schedules a function call to run after the surrounding function completes, commonly used for resource cleanup.
 
 ```go
@@ -248,6 +267,7 @@ defer file.Close()
 ```
 
 ### 10.2 Empty Interface (`interface{}`)
+
 - Represents any type, useful for functions needing flexibility with input types.
 
 ```go
@@ -257,6 +277,7 @@ func printAny(val interface{}) {
 ```
 
 ### 10.3 Type Assertion
+
 - Used to access the underlying concrete type of an interface.
 
 ```go
@@ -270,8 +291,9 @@ if ok {
 ## 11. Package Management and Project Structure
 
 ### 11.1 Packages
+
 - Go code is organized into packages; `main` is the special package for executables.
-  
+
 ```go
 package mypackage
 
@@ -281,18 +303,20 @@ func MyFunction() {
 ```
 
 ### 11.2 Project Structure
+
 - Go projects follow a directory structure:
-    ```
-    myproject/
-    ├── cmd/            # Main applications
-    ├── pkg/            # Library code
-    ├── internal/       # Private packages
-    ├── main.go         # Entry point for main package
-    ```
+  ```
+  myproject/
+  ├── cmd/            # Main applications
+  ├── pkg/            # Library code
+  ├── internal/       # Private packages
+  ├── main.go         # Entry point for main package
+  ```
 
 ## 12. Error and Testing
 
 ### 12.1 Error Wrapping
+
 - Use `fmt.Errorf` with `%w` for error wrapping, useful in error handling chains.
 
 ```go
@@ -302,6 +326,7 @@ err := fmt.Errorf("an error occurred: %w", originalErr)
 ```
 
 ### 12.2 Writing Tests
+
 - Go has a built-in testing library.
 
 ```go
